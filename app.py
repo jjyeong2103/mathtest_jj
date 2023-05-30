@@ -26,14 +26,14 @@ max_len = 100
 output_d = 5 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
-model = RNNModel(output_d, c) #RNNModel 쓰는경우
+# model = RNNModel(output_d, c) #RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
-# model = ATTModel(output_d, c) #ATTModel 쓰는경우
+model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
-model.load_state_dict(torch.load("./save/"1-7_att_sp_140".pt"))
+model.load_state_dict(torch.load("./save/"+model_name+".pt"))
 
 #자신에게 맞는 모델로 부르기
-tokenizer = AutoTokenizer.from_pretrained("./save/"1-7_att_sp_140) #sp tokenizer 쓰는 경우
+tokenizer = AutoTokenizer.from_pretrained("./save/"+model_name) #sp tokenizer 쓰는 경우
 # tokenizer = BertTokenizer.from_pretrained("./save/"+model_name+"-vocab.txt") #bw tokenizer 쓰는경우
 
 enc = tokenizer(response)["input_ids"] #sp tokenizer
