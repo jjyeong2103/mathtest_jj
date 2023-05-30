@@ -122,7 +122,7 @@ if st.button('피드백 받기'):
     
     st.write(response)
     if len(label) >= 5:
-        if label[0] == 1 and label[1] == 1 and label[2] == 1 and label[3] == 1 and label[4]] == 1:
+        if label[0] == 1 and label[1] == 1 and label[2] == 1 and label[3] == 1 and label[4] == 1:
             st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈2, 단위, 거듭제곱의 나눗셈1, 수의 나눗셈을 이해하고 있구나!', icon="✅")
         elif label[0] == 1 and label[2] == 1:
             st.success('거듭제곱의 거듭제곱, 단위를 이해하고 있구나! 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
