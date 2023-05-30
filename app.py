@@ -46,7 +46,7 @@ if l < max_len :
 else : pad = enc[l-max_len:]
 pad_ten = torch.tensor(pad)
 pad_ten = pad_ten.reshape(1,max_len)
-y = model(pad_ten)
+y = model7(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기'):
@@ -113,7 +113,7 @@ if l < max_len :
 else : pad = enc[l-max_len:]
 pad_ten = torch.tensor(pad)
 pad_ten = pad_ten.reshape(1,max_len)
-y = model(pad_ten)
+y = model8(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기'):
