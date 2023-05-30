@@ -55,11 +55,13 @@ if st.button('피드백 받기'):
     
     st.write(response)
     if label[1] == 1:
-        st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 이해하고 있구나!', icon="✅")
-    elif label[1] == 0:
-        st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="ℹ️")
-    elif '과정과 함께 작성하세요!' in response:
-        st.warning('힌트 버튼을 누른 후 고민하세요!', icon="⚠️")
+        st.success('거듭제곱의 거듭제곱를 이해하고 있구나!', icon="✅")
+    elif label[2] == 1:
+        st.success('거듭제곱의 곱셈을 이해하고 있구나!', icon="ℹ️")
+    elif label[3] == 1:
+        st.success('일차방정식 풀이를 이해하고 있구나!', icon="ℹ️")    
+    else:
+        st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
 
 
 if st.button('힌트 보기'):
