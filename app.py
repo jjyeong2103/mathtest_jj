@@ -8,15 +8,15 @@ import numpy as np
 st.title("자동 채점 모델 기반 자동 피드백")
 st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인섭, 윤예린, 정유진")
 
-st.subheader("문항3-3")
+st.subheader("문항1-7")
 st.markdown("$A \div 3y/2 = 4x^{2}y + 2xy +6$ 일 때 다항식 $A$ 를 구하시오")
 st.write("안녕! 나는 자동채점하는 기계야!")
 response = st.text_input('답안 :', "답안을 작성해주세요")
 
 #모델의 이름 정하기
-model_name = "3-3_rnn_sp_100" #모델 이름 넣어주기 확장자는 넣지말기!
+model_name = "1-7_att_sp_140" #모델 이름 넣어주기 확장자는 넣지말기!
 #모델에 맞는 hyperparameter 설정
-vs = 100 #vocab size
+vs = 140 #vocab size
 emb = 16 #default 값 지정 안했으면 건드리지 않아도 됨
 hidden = 32 #default 값 지정 안했으면 건드리지 않아도 됨
 nh = 4 #default 값 지정 안했으면 건드리지 않아도 됨
@@ -30,10 +30,10 @@ model = RNNModel(output_d, c) #RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
 # model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
-model.load_state_dict(torch.load("./save/"+model_name+".pt"))
+model.load_state_dict(torch.load("./save/"1-7_att_sp_140".pt"))
 
 #자신에게 맞는 모델로 부르기
-tokenizer = AutoTokenizer.from_pretrained("./save/"+ model_name) #sp tokenizer 쓰는 경우
+tokenizer = AutoTokenizer.from_pretrained("./save/"1-7_att_sp_140) #sp tokenizer 쓰는 경우
 # tokenizer = BertTokenizer.from_pretrained("./save/"+model_name+"-vocab.txt") #bw tokenizer 쓰는경우
 
 enc = tokenizer(response)["input_ids"] #sp tokenizer
