@@ -30,9 +30,9 @@ c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 # model = RNNModel(output_d, c) #RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
-model7 = ATTModel(output_d, c) #ATTModel 쓰는경우
+model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
-model7.load_state_dict(torch.load("./save/"+model_name+".pt"))
+model.load_state_dict(torch.load("./save/"+model_name+".pt"))
 
 #자신에게 맞는 모델로 부르기
 tokenizer = AutoTokenizer.from_pretrained("./save/"+model_name) #sp tokenizer 쓰는 경우
@@ -46,7 +46,7 @@ if l < max_len :
 else : pad = enc[l-max_len:]
 pad_ten = torch.tensor(pad)
 pad_ten = pad_ten.reshape(1,max_len)
-y = model7(pad_ten)
+y = model(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기'):
