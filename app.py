@@ -9,8 +9,8 @@ st.title("자동 채점 모델 기반 자동 피드백")
 st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인섭, 윤예린, 정유진")
 
 st.subheader("문항1-7")
-st.markdown("$$ (2^4)^x \times (2^2)^x=2^3 \times 2^{3x} $$일 때, 자연수 $$x$$의 값을 구하시오.")
-st.write("안녕!")
+st.markdown("$$ (2^4)^x \times (2^2)^x=2^3 \times 2^{3x} $$일 때, 자연수 $x$의 값을 구하시오.")
+st.write("안녕! 나는 자동채점하는 기계야!")
 response = st.text_input('답안 :', "답안을 작성해주세요")
 
 #모델의 이름 정하기
@@ -27,7 +27,7 @@ output_d = 3 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 # model = RNNModel(output_d, c) #RNNModel 쓰는경우
-# model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
+# model = LSTMModel(output_d, c) #LSTMModel 쓰는경우   
 model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
 model.load_state_dict(torch.load("./save/"+model_name+".pt"))
