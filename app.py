@@ -59,7 +59,8 @@ if st.button('피드백 받기'):
     else :
         st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="ℹ️")
 else :
-    st.write('힌트 버튼을 누른 후 고민하세요!')
+    if not label:
+        st.write('힌트 버튼을 누른 후 고민하세요!')
 
 if st.button('힌트 보기'):
     st.write('밑이 2로 같으니, 지수를 정리하세요!')
