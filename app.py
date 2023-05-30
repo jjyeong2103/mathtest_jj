@@ -60,3 +60,9 @@ if st.button('피드백 받기'):
 if st.button('힌트 보기'):
     st.write('지수를 정리하세요!')
  
+
+
+st.subheader("문항1-8")
+st.markdown("$$ (2^4)^x \\times (2^2)^x=2^3 \\times 2^{3x} $$일 때, 자연수 $$x$$의 값을 구하시오.")
+st.write("안녕!")
+response = st.text_input('답안 :', "답안을 작성해주세요")
