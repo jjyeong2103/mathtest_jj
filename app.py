@@ -10,7 +10,7 @@ st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인�
 
 st.subheader("문항1-7")
 st.markdown("$$ (2^4)^x \times (2^2)^x=2^3 \times 2^{3x} $$일 때, 자연수 $$x$$의 값을 구하시오.")
-st.write("안녕! 이거 왜 안 돼? 우이씨")
+st.write("안녕! 이거 왜 안 돼? 우이씨 왜")
 response = st.text_input('답안 :', "답안을 작성해주세요")
 
 #모델의 이름 정하기
