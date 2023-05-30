@@ -50,17 +50,17 @@ y = model(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기'):
-    """
-    output차원에 맞추어 피드백 넣기
-    """
+    
+    #output차원에 맞추어 피드백 넣기
+    
     st.write(response)
     if label[1] == 1:
-        st.success('(다항식) 곱하기 (단항식)을 잘하는구나!', icon="✅")
+        st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 이해하고 있구나!', icon="✅")
     else :
-        st.info('(다항식) 곱하기 (단항식)을 잘 생각해보자!', icon="ℹ️")
+        st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="ℹ️")
 
 if st.button('힌트 보기'):
-    st.write('지수를 정리하세요!')
+    st.write('밑이 2로 같으니, 지수를 정리하세요!')
  
 st.markdown("---")
 #문항1-8
