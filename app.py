@@ -56,7 +56,7 @@ if st.button('피드백 받기'):
         st.success('(다항식) 곱하기 (단항식)을 잘하는구나!', icon="✅")
     else :
         st.info('(다항식) 곱하기 (단항식)을 잘 생각해보자!', icon="ℹ️")
-else : 
-    if st.button('힌트 보기'):
+
+if st.button('힌트 보기'):
     st.write('지수를 정리하세요!')
  
