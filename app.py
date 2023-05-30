@@ -54,7 +54,7 @@ if st.button('피드백 받기'):
     #output차원에 맞추어 피드백 넣기
     
     st.write(response)
-    if len(label) >= 4:
+    if label.shape[0] >= 4:
        if label[1] == 1 and label[2] == 1 and label[3] == 1:
         st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 이해하고 있구나!', icon="✅")
        elif label[1] == 1 and label[2] == 1:
