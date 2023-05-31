@@ -138,6 +138,8 @@ if st.button('피드백 받기', key='button_1_8_1'):
             st.success('단위 변환을 이해하고 있구나! 거듭제곱의 곱셈, 거듭제곱의 나눗셈, 수의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")       
         elif label[0] == 0 and label[1] == 1 and label[2] == 1:
             st.success('거듭제곱의 나눗셈, 단위 변환을 이해하고 있구나! 거듭제곱의 곱셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
+        elif label[0] == 0 and label[1] == 0 and label[2] == 0 and label[3] == 1:
+            st.success('거듭제곱의 나눗셈을 이해하고 있구나! 거듭제곱의 곱셈, 단위 변환을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
         elif label[0] == 1 and label[1] == 0 and label[2] == 1:
             st.success('거듭제곱의 곱셈, 단위 변환을 이해하고 있구나! 거듭제곱의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
         elif label[3] == 1 and label[4] == 1:
