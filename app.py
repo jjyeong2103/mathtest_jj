@@ -506,6 +506,6 @@ if st.button('❓힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
 
 st.markdown("---")
+file_path = "C:\\Users\\SAMSUNG\\Desktop\\문항별피드백에 관한 의견(김지영).pptx"  
+st.download_button('🌻문항별피드백 의견 pptx 다운받기🌻', file_path)
 st.markdown("---")
-file_path = "C:\\Users\\SAMSUNG\\Desktop\\복습용 학습지.hwp"  
-st.download_button('🌻복습용 학습지 다운받기🌻', file_path)
