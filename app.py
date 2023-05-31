@@ -132,7 +132,7 @@ if st.button('피드백 받기', key='button_1_8_1'):
     if len(label) >= 5:
         if label[0] == 1 and label[1] == 1 and label[2] == 1 and label[3] == 0 and label[4] == 0:
             st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환을 이해하고 있구나!', icon="✅")
-        elif label[0] == 1 and label[2] == 0 and label[2] == 1 and label[3] == 0 and label[4] == 0:
+        elif label[0] == 1 and label[1] == 0 and label[2] == 1 and label[3] == 0 and label[4] == 0:
             st.success('거듭제곱의 거듭제곱, 단위 변환을 이해하고 있구나! 거듭제곱의 나눗셈을 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
         elif label[0] == 0 and label[1] == 0 and label[2] == 1 and label[3] == 0 and label[4] == 0:
             st.success('단위 변환을 이해하고 있구나! 거듭제곱의 곱셈, 거듭제곱의 나눗셈, 수의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")       
