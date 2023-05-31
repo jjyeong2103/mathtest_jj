@@ -312,7 +312,7 @@ st.markdown("---")
 # 문항1-6
 
 st.subheader("문항1-6")
-st.markdown("$$ (b/3)^{4} = $$")
+st.markdown("$$ \\left( {b} \\over {3}\\right)^{4} = $$")
 
 response = st.text_input('답안 :', key='answer_input_1_6')
 
@@ -496,3 +496,11 @@ if st.button('피드백 받기', key='button_1_8_1'):
 
 if st.button('힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
+
+
+
+import streamlit as st
+from streamlit_icons import icons
+
+if st.button('버튼', key='button1', help='이 버튼을 클릭하세요'):
+    st.write('버튼이 클릭되었습니다.', icons.success)
