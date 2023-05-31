@@ -11,8 +11,73 @@ st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인�
 
 
 st.markdown("---")
+#문항1-7
+
+st.subheader("문항1-7")
+st.markdown("$$ (2^4)^x \\times (2^2)^x=2^3 \\times 2^{3x} $$일 때, 자연수 $$x$$의 값을 구하시오.")
+
+response = st.text_input('답안 :', key='answer_input_1_7')
+
+#모델의 이름 정하기
+model_name = "1-7_att_sp_140" #모델 이름 넣어주기 확장자는 넣지말기!
+#모델에 맞는 hyperparameter 설정
+vs = 140 #vocab size
+emb = 16 #default 값 지정 안했으면 건드리지 않아도 됨
+hidden = 32 #default 값 지정 안했으면 건드리지 않아도 됨
+nh = 4 #default 값 지정 안했으면 건드리지 않아도 됨
+device = "cpu" #default 값 지정 안했으면 건드리지 않아도 됨
+max_len = 100
+#output_d 설정
+output_d = 3 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
+
+# model = RNNModel(output_d, c) #RNNModel 쓰는경우
+# model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
+model = ATTModel(output_d, c) #ATTModel 쓰는경우
+
+model.load_state_dict(torch.load("./save/"+model_name+".pt"))
+
+#자신에게 맞는 모델로 부르기
+tokenizer = AutoTokenizer.from_pretrained("./save/"+model_name) #sp tokenizer 쓰는 경우
+# tokenizer = BertTokenizer.from_pretrained("./save/"+model_name+"-vocab.txt") #bw tokenizer 쓰는경우
+
+enc = tokenizer(response)["input_ids"] #sp tokenizer
+# enc = tokenizer.encode(response) #bw tokenizer
+l = len(enc)
+if l < max_len :
+    pad = (max_len - l) * [0] + enc
+else : pad = enc[l-max_len:]
+pad_ten = torch.tensor(pad)
+pad_ten = pad_ten.reshape(1,max_len)
+y = model(pad_ten)
+label = y.squeeze().detach().cpu().numpy().round()
+
+if st.button('피드백 받기', key='button1_7_1'):
+    
+    #output차원에 맞추어 피드백 넣기
+    
+    st.write(response)
+    if len(label) >= 3:
+        if label[0] == 1 and label[1] == 1 and label[2] == 1:
+            st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 이해하고 있구나!', icon="✅")   
+        elif label[0] == 1 and label[1] == 1 and label[2] == 0:
+            st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈을 이해하고 있구나! 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
+        elif label[0] == 1 and label[1] == 0 and label[2] == 0:
+            st.success('거듭제곱의 거듭제곱를 이해하고 있구나! 거듭제곱의 곱셈, 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
+        elif label[0] == 0 and label[1] == 1 and label[2] == 0:
+            st.success('거듭제곱의 곱셈을 이해하고 있구나! 거듭제곱의 거듭제곱, 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
+        elif label[2] == 0 and label[2] == 0 and label[2] == 1:
+            st.success('일차방정식 풀이를 이해하고 있구나! 거듭제곱의 거듭제곱, 거듭제곱의 곱셈을 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
+        else:
+            st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
+    else:
+        st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
+
+if st.button('힌트 보기', key='button1_7_2'):
+    st.write('밑이 2로 같으니, 지수를 정리하세요!')
 
 
+st.markdown("---")
 #문항1-8
 
 st.subheader("문항1-8")
@@ -55,40 +120,28 @@ y = model_1_8(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기', key='button_1_8_1'):
+    #output차원에 맞추어 피드백 넣기
     st.write(response)
-    correct_count = 0
-    if label[0] == 1:
-        correct_count += 1
-        st.success('거듭제곱의 곱셈을 이해하고 있구나!', icon="✅")
+    if len(label) >= 5:
+        if label[0] == 1 and label[1] == 1 and label[2] == 1:
+            st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환을 이해하고 있구나!', icon="✅")
+        elif label[3] == 1 and label[4] == 1:
+            st.success('거듭제곱의 나눗셈, 수의 나눗셈을 이해하고 있구나!', icon="✅")
+        elif label[0] == 1 and label[1] == 0 and label[2] == 1 and label[3] == 0 and label[4] == 0:
+            st.success('거듭제곱의 곱셈, 단위 변환을 이해하고 있구나! 거듭제곱의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
+        elif label[0] == 0 and label[1] == 0 and label[2] == 1 and label[3] == 0 and label[4] == 0:
+            st.success('단위 변환을 이해하고 있구나! 거듭제곱의 곱셈, 거듭제곱의 나눗셈, 수의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")       
+        elif label[0] == 0 and label[1] == 1 and label[2] == 0 and label[3] == 0 and label[4] == 0:
+            st.success('거듭제곱의 거듭제곱을 이해하고 있구나! 단위 변환, 수의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
+        elif label[0] == 0 and label[1] == 0 and label[2] == 0 and label[3] == 1 and label[4] == 0:
+            st.success('거듭제곱의 나눗셈을 이해하고 있구나! 거듭제곱의 곱셈, 단위 변환을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
+elif label[0] == 1 and label[1] == 0 and label[2] == 0 and label[3] == 0 and label[4] == 0:
+            st.success('거듭제곱의 곱셈을 이해하고 있구나! 거듭제곱의 나눗셈, 단위 변환을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
+       
+        else:
+            st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
     else:
-        st.info('거듭제곱의 곱셈을 복습하세요!', icon="⚠️")
-
-    if label[1] == 1:
-        correct_count += 1
-        st.success('거듭제곱의 나눗셈을 이해하고 있구나!', icon="✅")
-    else:
-        st.info('거듭제곱의 나눗셈을 복습하세요!', icon="⚠️")
-
-    if label[2] == 1:
-        correct_count += 1
-        st.success('단위 변환을 이해하고 있구나!', icon="✅")
-    else:
-        st.info('단위 변환을 복습하세요!', icon="⚠️")
-
-    if label[3] == 1:
-        correct_count += 1
-        st.success('수의 나눗셈을 이해하고 있구나!', icon="✅")
-    else:
-        st.info('수의 나눗셈을 복습하세요!', icon="⚠️")
-
-    if label[4] == 1:
-        correct_count += 1
-        st.success('거듭제곱의 거듭제곱을 이해하고 있구나!', icon="✅")
-    else:
-        st.info('거듭제곱의 거듭제곱을 복습하세요!', icon="⚠️")
-
-    if correct_count == 0:
-        st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈, 거듭제곱의 거듭제곱을 복습하세요!', icon="⚠️")
+        st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
 
 if st.button('힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
