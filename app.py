@@ -17,6 +17,9 @@ with st.spinner(text='오늘 수업 즐겁게 들었나요? 이제 여러분들�
     time.sleep(4)
     st.success('자, 시작해볼까요?')
 
+from streamlit_awesome_icons import icon
+
+st.markdown(icon("fas fa-user"))
 
 # 문항1-1
 
