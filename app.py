@@ -64,6 +64,7 @@ if st.button('피드백 받기', key='button1_1_1_1'):
 if st.button('힌트 보기', key='button1_1_1_2'):
     st.write('밑이 a로 같아요!')
 
+
 st.markdown("---")
 # 문항1-2
 
@@ -125,6 +126,65 @@ if st.button('피드백 받기', key='button1_1_2_1'):
 
 if st.button('힌트 보기', key='button1_1_2_2'):
     st.write('괄호를 먼저 정리하세요!')
+
+st.markdown("---")
+# 문항1-2
+
+st.subheader("문항1-2")
+st.markdown("$$ (x^{4})^{3} \\times (x^{2})^{5} = $$")
+
+response = st.text_input('답안 :', key='answer_input_1_2')
+
+# 모델의 이름 정하기
+model_name_1_3 = "1-3_att_sp_62"  # 모델 이름 넣어주기 확장자는 넣지말기!
+# 모델에 맞는 hyperparameter 설정
+vs = 62  # vocab size
+emb = 16  # default 값 지정 안했으면 건드리지 않아도 됨
+hidden = 32  # default 값 지정 안했으면 건드리지 않아도 됨
+nh = 4  # default 값 지정 안했으면 건드리지 않아도 됨
+device = "cpu"  # default 값 지정 안했으면 건드리지 않아도 됨
+max_len = 100
+# output_d 설정
+output_d = 1  # 자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
+
+# model = RNNModel(output_d, c)  # RNNModel 쓰는경우
+# model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
+model_1_3 = ATTModel(output_d, c) #ATTModel 쓰는경우
+
+model_1_3.load_state_dict(torch.load("./save/"+model_name_1_2+".pt"))
+
+# 자신에게 맞는 모델로 부르기
+tokenizer_1_3 = AutoTokenizer.from_pretrained("./save/"+model_name_1_2)  # sp tokenizer 쓰는 경우
+# tokenizer = BertTokenizer.from_pretrained("./save/"+model_name+"-vocab.txt") #bw tokenizer 쓰는경우
+
+enc = tokenizer_1_3(response)["input_ids"]  # sp tokenizer
+# enc = tokenizer.encode(response) #bw tokenizer
+l = len(enc)
+if l < max_len:
+    pad = (max_len - l) * [0] + enc
+else:
+    pad = enc[l-max_len:]
+pad_ten = torch.tensor(pad)
+pad_ten = pad_ten.reshape(1, max_len)
+y = model_1_3(pad_ten)
+label_1_3 = y.squeeze().detach().cpu().numpy().round()
+
+if st.button('피드백 받기', key='button1_1_3_1'):
+    
+    # output차원에 맞추어 피드백 넣기
+   st.write(response)
+   if len(label_1_3) >= 1:
+       if label_1_3[0] == 1:
+           st.success('거듭제곱의 나눗셈3을 이해하고 있구나!', icon="✅")   
+       else:
+            st.info('거듭제곱의 나눗셈을 복습하세요!', icon="⚠️")
+   else:
+         st.info('거듭제곱의 나눗셈을 복습하세요!', icon="⚠️")
+
+if st.button('힌트 보기', key='button1_1_3_2'):
+    st.write('밑이 b로 같아요!')
+
 
 
 st.markdown("---")
