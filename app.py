@@ -153,7 +153,7 @@ max_len = 100
 output_d_6 = 5 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
-# model_1_8 = RNNModel(output_d_6, c) #RNNModel 쓰는경우
+# model = RNNModel(output_d_6, c) #RNNModel 쓰는경우
 model_1_8 = LSTMModel(output_d, c) #LSTMModel 쓰는경우
 # model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
