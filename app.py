@@ -27,10 +27,10 @@ nh = 4  # default 값 지정 안했으면 건드리지 않아도 됨
 device = "cpu"  # default 값 지정 안했으면 건드리지 않아도 됨
 max_len = 100
 # output_d 설정
-output_d = 1  # 자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+output_d_1_1 = 1  # 자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
-model_1_1 = RNNModel(output_d, c)  # RNNModel 쓰는경우
+model_1_1 = RNNModel(output_d_1_1, c)  # RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
 # model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
@@ -65,6 +65,7 @@ if st.button('힌트 보기', key='button1_1_1_2'):
     st.write('밑이 a로 같아요!')
 
 
+
 st.markdown("---")
 # 문항1-2
 
@@ -83,12 +84,12 @@ nh = 4  # default 값 지정 안했으면 건드리지 않아도 됨
 device = "cpu"  # default 값 지정 안했으면 건드리지 않아도 됨
 max_len = 100
 # output_d 설정
-output_d = 2  # 자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+output_d_1_2 = 2  # 자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 # model = RNNModel(output_d, c)  # RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
-model_1_2 = ATTModel(output_d, c) #ATTModel 쓰는경우
+model_1_2 = ATTModel(output_d_1_2, c) #ATTModel 쓰는경우
 
 model_1_2.load_state_dict(torch.load("./save/"+model_name_1_2+".pt"))
 
@@ -127,6 +128,7 @@ if st.button('힌트 보기', key='button1_1_2_2'):
     st.write('괄호를 먼저 정리하세요!')
 
 
+
 st.markdown("---")
 # 문항1-3
 
@@ -145,12 +147,12 @@ nh = 4  # default 값 지정 안했으면 건드리지 않아도 됨
 device = "cpu"  # default 값 지정 안했으면 건드리지 않아도 됨
 max_len = 100
 # output_d 설정
-output_d = 1  # 자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+output_d_1_3 = 1  # 자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 # model = RNNModel(output_d, c)  # RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
-model_1_3 = ATTModel(output_d, c) #ATTModel 쓰는경우
+model_1_3 = ATTModel(output_d_1_3, c) #ATTModel 쓰는경우
 
 model_1_3.load_state_dict(torch.load("./save/"+model_name_1_3+".pt"))
 
@@ -202,12 +204,12 @@ nh = 4 #default 값 지정 안했으면 건드리지 않아도 됨
 device = "cpu" #default 값 지정 안했으면 건드리지 않아도 됨
 max_len = 100
 #output_d 설정
-output_d = 3 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+output_d_1_7 = 3 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 # model = RNNModel(output_d, c) #RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
-model_1_7 = ATTModel(output_d, c) #ATTModel 쓰는경우
+model_1_7 = ATTModel(output_d_1_7, c) #ATTModel 쓰는경우
 
 model_1_7.load_state_dict(torch.load("./save/"+model_name_1_7+".pt"))
 
@@ -269,11 +271,11 @@ nh = 4 #default 값 지정 안했으면 건드리지 않아도 됨
 device = "cpu" #default 값 지정 안했으면 건드리지 않아도 됨
 max_len = 100
 #output_d 설정
-output_d_6 = 5 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+output_d_1_8 = 5 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
-# model = RNNModel(output_d_6, c) #RNNModel 쓰는경우
-model_1_8 = LSTMModel(output_d, c) #LSTMModel 쓰는경우
+# model = RNNModel(output_d, c) #RNNModel 쓰는경우
+model_1_8 = LSTMModel(output_d_1_8, c) #LSTMModel 쓰는경우
 # model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
 model_1_8.load_state_dict(torch.load("./save/"+model_name_1_8+".pt"))
