@@ -14,9 +14,6 @@ st.markdown("---")
 import streamlit as st
 import time
 
-with st.spinner(text='In progress'):
-    time.sleep(1)
-    st.success('자! 여러분들이 얼마나 공부를 열심히 했는지 확인해봅시다!')
 
 
 # 문항1-1
@@ -60,6 +57,10 @@ pad_ten = torch.tensor(pad)
 pad_ten = pad_ten.reshape(1, max_len)
 y = model_1_1(pad_ten)
 label_1_1 = y.squeeze().detach().cpu().numpy().round()
+
+with st.spinner(text='In progress'):
+    time.sleep(10)
+    st.success('다 풀었다면 피드백 받기 버튼을, 잘 모르겠다면 힌트 보기 버튼을 눌러보세요!')
 
 if st.button('👀피드백 받기', key='button1_1_1_1'):
     
