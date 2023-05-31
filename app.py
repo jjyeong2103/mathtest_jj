@@ -505,8 +505,7 @@ if st.button('👀피드백 받기', key='button_1_8_1'):
 if st.button('❓힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
 
-
-st.write("<strong><hr></strong>", unsafe_allow_html=True)
-file_path = "C:\\Users\\SAMSUNG\\Desktop\\문항별피드백에 관한 의견(김지영).pptx"  
-st.download_button('🌻문항별피드백 의견 pptx 다운받기🌻', file_path)
+st.markdown("---")
+file_path = "https://github.com/jjyeong2103/mathtest_jj/blob/main/%EB%B3%B5%EC%8A%B5%EB%AC%B8%EC%A0%9C(%EC%8B%9D%EC%9D%98%EA%B3%84%EC%82%B0).hwp"  
+st.download_button('🌻복습 문항 다운받기🌻', file_path)
 st.markdown("---")
