@@ -445,7 +445,7 @@ if st.button('❓힌트3️⃣', key='button1_7_4'):
 
 if st.button('💯모범답안', key='button1_7_5'):
     image_path = "save/1-7 모범답안.png-.png"
-    st.image(image_path, caption='Image Caption')
+    st.image(image_path, caption='1-7모범답안')
 
 
 st.markdown("---")
