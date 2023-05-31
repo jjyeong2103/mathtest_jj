@@ -133,7 +133,7 @@ st.markdown("---")
 st.subheader("문항1-2")
 st.markdown("$$ (x^{4})^{3} \\times (x^{2})^{5} = $$")
 
-response = st.text_input('답안 :', key='answer_input_1_2')
+response = st.text_input('답안 :', key='answer_input_1_3')
 
 # 모델의 이름 정하기
 model_name_1_3 = "1-3_att_sp_62"  # 모델 이름 넣어주기 확장자는 넣지말기!
