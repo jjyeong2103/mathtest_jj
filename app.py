@@ -423,19 +423,29 @@ if st.button('👀피드백 받기', key='button1_7_1'):
     if len(label_1_7) >= 3:
         if label_1_7[0] == 1 and label_1_7[1] == 1 and label_1_7[2] == 1:
             st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 이해하고 있구나!', icon="✅")   
-        #elif label_1_7[0] == 1 and label_1_7[1] == 1 and label_1_7[2] == 0:
-            #st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈을 이해하고 있구나! 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
-        #elif label_1_7[0] == 1 and label_1_7[1] == 0 and label_1_7[2] == 0:
+        elif label_1_7[0] == 1 and label_1_7[1] == 1 and label_1_7[2] == 0:
+            st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈을 이해하고 있구나! 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
+        elif label_1_7[0] == 1 and label_1_7[1] == 0 and label_1_7[2] == 0:
             #st.success('거듭제곱의 거듭제곱를 이해하고 있구나! 거듭제곱의 곱셈, 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
-        #elif label_1_7[0] == 0 and label_1_7[1] == 1 and label_1_7[2] == 0:
+        elif label_1_7[0] == 0 and label_1_7[1] == 1 and label_1_7[2] == 0:
             #st.success('거듭제곱의 곱셈을 이해하고 있구나! 거듭제곱의 거듭제곱, 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
-        #elif label_1_7[2] == 0 and label_1_7[2] == 0 and label_1_7[2] == 1:
+        elif label_1_7[2] == 0 and label_1_7[2] == 0 and label_1_7[2] == 1:
             #st.success('일차방정식 풀이를 이해하고 있구나! 거듭제곱의 거듭제곱, 거듭제곱의 곱셈을 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
         else:
             st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
 
-if st.button('❓힌트 보기', key='button1_7_2'):
+if st.button('❓힌트1️⃣', key='button1_7_2'):
     st.write('밑이 2로 같으니, 지수를 정리하세요!')
+
+if st.button('❓힌트2️⃣', key='button1_7_2'):
+    st.write('거듭제곱의 거듭제곱을 적용해서 식을 정리하세요!')
+
+if st.button('❓힌트3️⃣', key='button1_7_2'):
+    st.write('거듭제곱의 곱셈을 적용해서 식을 정리하세요!')
+
+if st.button('💯모범답안', key='button1_7_2'):
+    image_url = "https://github.com/jjyeong2103/mathtest_jj/blob/main/save/1-7%20%EB%AA%A8%EB%B2%94%EB%8B%B5%EC%95%88.png-.png"
+    st.image(image_url, caption='Image Caption')
 
 
 st.markdown("---")
