@@ -19,7 +19,7 @@ st.markdown("$$ (2^4)^x \\times (2^2)^x=2^3 \\times 2^{3x} $$일 때, 자연수 
 response = st.text_input('답안 :', key='answer_input_1_7')
 
 #모델의 이름 정하기
-model_name = "1-7_att_sp_140" #모델 이름 넣어주기 확장자는 넣지말기!
+model_name_1_7 = "1-7_att_sp_140" #모델 이름 넣어주기 확장자는 넣지말기!
 #모델에 맞는 hyperparameter 설정
 vs = 140 #vocab size
 emb = 16 #default 값 지정 안했으면 건드리지 않아도 됨
@@ -33,9 +33,9 @@ c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 # model = RNNModel(output_d, c) #RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
-model = ATTModel(output_d, c) #ATTModel 쓰는경우
+model_1_7 = ATTModel(output_d, c) #ATTModel 쓰는경우
 
-model.load_state_dict(torch.load("./save/"+model_name+".pt"))
+model_1_7.load_state_dict(torch.load("./save/"+model_name_1_7+".pt"))
 
 #자신에게 맞는 모델로 부르기
 tokenizer_1_7 = AutoTokenizer.from_pretrained("./save/"+model_name) #sp tokenizer 쓰는 경우
@@ -99,7 +99,7 @@ output_d_6 = 5 #자기의 모델에 맞는 output_d구하기 (지식요소 개�
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 # model_1_8 = RNNModel(output_d_6, c) #RNNModel 쓰는경우
-model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
+model_1_8 = LSTMModel(output_d, c) #LSTMModel 쓰는경우
 # model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
 model_1_8.load_state_dict(torch.load("./save/"+model_name_1_8+".pt"))
