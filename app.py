@@ -14,7 +14,7 @@ st.markdown("---")
 import streamlit as st
 import time
 with st.spinner(text='오늘 수업 즐겁게 들었나요? 이제 여러분들이 얼마나 공부를 열심히 했는지 알아보도록 해요!'):
-    time.sleep(10)
+    time.sleep(4)
     st.success('자, 시작해볼까요?')
 
 
