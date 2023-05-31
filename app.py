@@ -13,7 +13,7 @@ st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인�
 st.subheader("문항1-7")
 st.markdown("$$ (2^4)^x \\times (2^2)^x=2^3 \\times 2^{3x} $$일 때, 자연수 $$x$$의 값을 구하시오.")
 
-response = st.text_input('답안 :', key='answer_input_1')
+response = st.text_input('답안 :', key='answer_input_1_7')
 
 #모델의 이름 정하기
 model_name = "1-7_att_sp_140" #모델 이름 넣어주기 확장자는 넣지말기!
@@ -49,7 +49,7 @@ pad_ten = pad_ten.reshape(1,max_len)
 y = model(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
-if st.button('피드백 받기', key='button1'):
+if st.button('피드백 받기', key='button1_7_1'):
     
     #output차원에 맞추어 피드백 넣기
     
@@ -70,7 +70,7 @@ if st.button('피드백 받기', key='button1'):
     else:
         st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button1'):
+if st.button('힌트 보기', key='button1_7_2'):
     st.write('밑이 2로 같으니, 지수를 정리하세요!')
  
 
@@ -90,7 +90,7 @@ st.markdown("---")
 st.subheader("문항1-8")
 st.markdown("저장 매체의 용량을 나타내는 단위로 B, KB, MB 등이 있고, 1KB=$2^{10}$B, 1MB=$2^{10}$KB이다. 찬혁이가 컴퓨터로 용량이 36MB인 자료를 내려받으려고 한다. 이 컴퓨터에서 1초당 내려받는 자료의 용량이 $9 \\times 2^{20}$KB일 때, 찬혁이가 자료를 모두 내려받는 데 몇 초가 걸리는지 구하시오.")
 
-response = st.text_input('답안 :', key='answer_input_2')
+response = st.text_input('답안 :', key='answer_input_1_8')
 
 #모델의 이름 정하기
 model_name_1_8 = "1-8_rnn_sp_140" #모델 이름 넣어주기 확장자는 넣지말기!
@@ -126,7 +126,7 @@ pad_ten = pad_ten.reshape(1,max_len)
 y = model_1_8(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
-if st.button('피드백 받기', key='button2'):
+if st.button('피드백 받기', key='button_1_8_1'):
     #output차원에 맞추어 피드백 넣기
     st.write(response)
     if len(label) >= 6:
@@ -157,5 +157,5 @@ if st.button('피드백 받기', key='button2'):
     else:
         st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button2'):
+if st.button('힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
