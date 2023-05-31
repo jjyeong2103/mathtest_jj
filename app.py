@@ -109,7 +109,7 @@ model_1_8 = RNNModel(output_d_6, c) #RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
 # model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
-model_1_8.load_state_dict(torch.load("./save/"+model_name_1_8+".pt"))
+model_1_8.load_state_dict(torch.load("./save/"+model_name_1_8+".pt"), strict=False)
 
 #자신에게 맞는 모델로 부르기
 tokenizer_1_8 = AutoTokenizer.from_pretrained("./save/"+model_name_1_8) #sp tokenizer 쓰는 경우
