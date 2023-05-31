@@ -73,7 +73,7 @@ st.markdown("$$ (x^{4})^{3} \\times (x^{2})^{5} = $$")
 response = st.text_input('답안 :', key='answer_input_1_2')
 
 # 모델의 이름 정하기
-model_name_1_1 = "1-2_att_sp_60"  # 모델 이름 넣어주기 확장자는 넣지말기!
+model_name_1_2 = "1-2_att_sp_60"  # 모델 이름 넣어주기 확장자는 넣지말기!
 # 모델에 맞는 hyperparameter 설정
 vs = 60  # vocab size
 emb = 16  # default 값 지정 안했으면 건드리지 않아도 됨
