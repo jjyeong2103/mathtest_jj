@@ -70,7 +70,7 @@ if st.button('피드백 받기', key='button1'):
     else:
         st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기'):
+if st.button('힌트 보기', key='button1'):
     st.write('밑이 2로 같으니, 지수를 정리하세요!')
  
 
@@ -157,5 +157,5 @@ if st.button('피드백 받기', key='button2'):
     else:
         st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기'):
+if st.button('힌트 보기', key='button2'):
     st.write('단위 변환을 해보세요!')
