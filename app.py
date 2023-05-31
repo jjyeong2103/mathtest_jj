@@ -49,7 +49,7 @@ pad_ten = pad_ten.reshape(1,max_len)
 y = model(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
-if st.button('피드백 받기'):
+if st.button('Button 1', key='button1', '피드백 받기'):
     
     #output차원에 맞추어 피드백 넣기
     
@@ -126,10 +126,8 @@ pad_ten = pad_ten.reshape(1,max_len)
 y = model_1_8(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
-if st.button('피드백 받기'):
-    
+if st.button('Button 2', key='button2', '피드백 받기'):
     #output차원에 맞추어 피드백 넣기
-    
     st.write(response)
     if len(label) >= 6:
         if label[0] == 1 and label[1] == 1 and label[2] == 1 and label[3] == 1 and label[4] == 1:
@@ -157,7 +155,7 @@ if st.button('피드백 받기'):
         else:
             st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
     else:
-        st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을', icon="⚠️")
+        st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
 
 if st.button('힌트 보기'):
     st.write('단위 변환을 해보세요!')
