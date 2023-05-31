@@ -49,7 +49,7 @@ pad_ten = pad_ten.reshape(1,max_len)
 y = model(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
-if st.button('Button 1', key='button1', '피드백 받기'):
+if st.button('피드백 받기', key='button1'):
     
     #output차원에 맞추어 피드백 넣기
     
@@ -126,7 +126,7 @@ pad_ten = pad_ten.reshape(1,max_len)
 y = model_1_8(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
-if st.button('Button 2', key='button2', '피드백 받기'):
+if st.button('피드백 받기', key='button2'):
     #output차원에 맞추어 피드백 넣기
     st.write(response)
     if len(label) >= 6:
