@@ -18,6 +18,7 @@ with st.spinner(text='오늘 수업 즐겁게 들었나요? 이제 여러분들�
     st.success('자, 시작해볼까요?')
 
 pip install streamlit_awesome_icons
+
 from streamlit_awesome_icons import icon_name
 st.markdown(icon_name("fas fa-user"))
 
