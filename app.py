@@ -505,5 +505,5 @@ if st.button('👀피드백 받기', key='button_1_8_1'):
 if st.button('❓힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
 
-
-st.download_button('Download file', data)
+file_path = "C:\Users\SAMSUNG\Desktop\복습용 학습지.hwp"  
+st.download_button('Download file', file_path)
