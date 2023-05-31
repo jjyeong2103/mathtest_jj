@@ -102,14 +102,14 @@ nh = 4 #default 값 지정 안했으면 건드리지 않아도 됨
 device = "cpu" #default 값 지정 안했으면 건드리지 않아도 됨
 max_len = 100
 #output_d 설정
-output_d_6 = 6 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+output_d_6 = 5 #자기의 모델에 맞는 output_d구하기 (지식요소 개수)
 c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 
 model_1_8 = RNNModel(output_d_6, c) #RNNModel 쓰는경우
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
 # model = ATTModel(output_d, c) #ATTModel 쓰는경우
 
-model_1_8.load_state_dict(torch.load("./save/"+model_name_1_8+".pt"), strict=False)
+model_1_8.load_state_dict(torch.load("./save/"+model_name_1_8+".pt"))
 
 #자신에게 맞는 모델로 부르기
 tokenizer_1_8 = AutoTokenizer.from_pretrained("./save/"+model_name_1_8) #sp tokenizer 쓰는 경우
@@ -132,27 +132,27 @@ if st.button('피드백 받기'):
     
     st.write(response)
     if len(label) >= 6:
-        if label[0] == 1 and label[1] == 1 and label[2] == 1 and label[3] == 1 and label[4] == 1 and label[5] == 1:
+        if label[0] == 1 and label[1] == 1 and label[2] == 1 and label[3] == 1 and label[4] == 1:
             st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 이해하고 있구나!', icon="✅")
-        elif label[0] == 1 and label[2] == 1 and label[5] == 0:
+        elif label[0] == 1 and label[2] == 1:
             st.success('거듭제곱의 거듭제곱, 단위 변환을 이해하고 있구나! 거듭제곱의 나눗셈을 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
-        elif label[0] == 1 and label[1] == 1 and label[2] == 1 and label[5] == 1:
+        elif label[0] == 1 and label[1] == 1 and label[2] == 1:
             st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환을 이해하고 있구나!', icon="✅")
-        elif label[0] == 1 and label[1] == 1 and label[2] == 1 and label[5] == 0:
+        elif label[0] == 1 and label[1] == 1 and label[2] == 1:
             st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환을 이해하고 있구나! 그런데 나눗셈 괄호 오류를 범했구나!', icon="ℹ️")
-        elif label[0] == 0 and label[1] == 0 and label[2] == 1 and label[5] == 0:
+        elif label[0] == 0 and label[1] == 0 and label[2] == 1:
             st.success('단위 변환을 이해하고 있구나! 거듭제곱의 곱셈, 거듭제곱의 나눗셈, 수의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")       
-        elif label[0] == 0 and label[1] == 1 and label[2] == 1 and label[5] == 0:
+        elif label[0] == 0 and label[1] == 1 and label[2] == 1:
             st.success('거듭제곱의 나눗셈, 단위 변환을 이해하고 있구나! 거듭제곱의 곱셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
-        elif label[0] == 1 and label[1] == 0 and label[2] == 1 and label[5] == 0:
+        elif label[0] == 1 and label[1] == 0 and label[2] == 1:
             st.success('거듭제곱의 곱셈, 단위 변환을 이해하고 있구나! 거듭제곱의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
-        elif label[0] == 1 and label[1] == 0 and label[2] == 0 and label[3] == 0 and label[4] == 1 and label[5] == 0:
+        elif label[0] == 1 and label[1] == 0 and label[2] == 0 and label[3] == 0 and label[4] == 1:
             st.success('수의 나눗셈을 이해하고 있구나! 거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
-        elif label[0] == 0 and label[1] == 0 and label[2] == 0 and label[3] == 1 and label[4] == 1 and label[5] == 1:
+        elif label[0] == 0 and label[1] == 0 and label[2] == 0 and label[3] == 1 and label[4] == 1:
             st.success('거듭제곱의 나눗셈, 수의 나눗셈을 이해하고 있구나!', icon="✅")
-        elif label[0] == 0 and label[1] == 0 and label[2] == 0 and label[3] == 0 and label[4] == 0 and label[5] == 1:
+        elif label[0] == 0 and label[1] == 0 and label[2] == 0 and label[3] == 0 and label[4] == 0:
             st.success('답은 맞았지만 해결과정을 면밀히 관찰해보세요!', icon="ℹ️")
-        elif label[0] == 1 and label[1] == 0 and label[2] == 0 and label[3] == 0 and label[4] == 0 and label[5] == 0:
+        elif label[0] == 1 and label[1] == 0 and label[2] == 0 and label[3] == 0 and label[4] == 0:
             st.success('거듭제곱의 곱셈을 이해하고 있구나! 거듭제곱의 나눗셈, 단위 변환을 올바르게 적용해서 풀어보세요!', icon="ℹ️")   
         else:
             st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
