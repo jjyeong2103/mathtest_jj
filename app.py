@@ -55,17 +55,29 @@ y = model_1_8(pad_ten)
 label = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기', key='button_1_8_1'):
-    #output차원에 맞추어 피드백 넣기
     st.write(response)
     if len(label) >= 5:
-        if label[0] == 1 and label[1] == 1 and label[2] == 1:
-            st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환을 이해하고 있구나!', icon="✅")
-        elif label[3] == 1 and label[4] == 1:
-            st.success('거듭제곱의 나눗셈, 수의 나눗셈을 이해하고 있구나!', icon="✅")   
-        else:
-            st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
+        correct_count = 0
+        if label[0] == 1:
+            correct_count += 1
+            st.success('거듭제곱의 곱셈을 이해하고 있구나!', icon="✅")
+        if label[1] == 1:
+            correct_count += 1
+            st.success('거듭제곱의 나눗셈을 이해하고 있구나!', icon="✅")
+        if label[2] == 1:
+            correct_count += 1
+            st.success('단위 변환을 이해하고 있구나!', icon="✅")
+        if label[3] == 1:
+            correct_count += 1
+            st.success('수의 나눗셈을 이해하고 있구나!', icon="✅")
+        if label[4] == 1:
+            correct_count += 1
+            st.success('거듭제곱의 거듭제곱을 이해하고 있구나!', icon="✅")
+
+        if correct_count == 0:
+            st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈, 거듭제곱의 거듭제곱을 복습하세요!', icon="⚠️")
     else:
-        st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
+        st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈, 거듭제곱의 거듭제곱을 복습하세요!', icon="⚠️")
 
 if st.button('힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
