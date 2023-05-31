@@ -20,7 +20,7 @@ with st.spinner(text='오늘 수업 즐겁게 들었나요? 이제 여러분들�
 
 # 문항1-1
 
-st.subheader("<span style='color:blue'>문항1-1</span>", unsafe_allow_html=True)
+st.subheader("문항1-1", unsafe_allow_html=True)
 st.markdown("$$ a^{2} \\times a^{5} = $$")
 
 response = st.text_input('답안 :', key='answer_input_1_1')
