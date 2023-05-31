@@ -38,10 +38,10 @@ model = ATTModel(output_d, c) #ATTModel 쓰는경우
 model.load_state_dict(torch.load("./save/"+model_name+".pt"))
 
 #자신에게 맞는 모델로 부르기
-tokenizer = AutoTokenizer.from_pretrained("./save/"+model_name) #sp tokenizer 쓰는 경우
+tokenizer_1_7 = AutoTokenizer.from_pretrained("./save/"+model_name) #sp tokenizer 쓰는 경우
 # tokenizer = BertTokenizer.from_pretrained("./save/"+model_name+"-vocab.txt") #bw tokenizer 쓰는경우
 
-enc = tokenizer(response)["input_ids"] #sp tokenizer
+enc = tokenizer_1_7(response)["input_ids"] #sp tokenizer
 # enc = tokenizer.encode(response) #bw tokenizer
 l = len(enc)
 if l < max_len :
@@ -49,24 +49,24 @@ if l < max_len :
 else : pad = enc[l-max_len:]
 pad_ten = torch.tensor(pad)
 pad_ten = pad_ten.reshape(1,max_len)
-y = model(pad_ten)
-label = y.squeeze().detach().cpu().numpy().round()
+y = model_1_7(pad_ten)
+label_1_7 = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기', key='button1_7_1'):
     
     #output차원에 맞추어 피드백 넣기
     
     st.write(response)
-    if len(label) >= 3:
-        if label[0] == 1 and label[1] == 1 and label[2] == 1:
+    if len(label_1_7) >= 3:
+        if label_1_7[0] == 1 and label_1_7[1] == 1 and label_1_7[2] == 1:
             st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 이해하고 있구나!', icon="✅")   
-        elif label[0] == 1 and label[1] == 1 and label[2] == 0:
+        elif label_1_7[0] == 1 and label_1_7[1] == 1 and label_1_7[2] == 0:
             st.success('거듭제곱의 거듭제곱, 거듭제곱의 곱셈을 이해하고 있구나! 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
-        elif label[0] == 1 and label[1] == 0 and label[2] == 0:
+        elif label_1_7[0] == 1 and label_1_7[1] == 0 and label_1_7[2] == 0:
             st.success('거듭제곱의 거듭제곱를 이해하고 있구나! 거듭제곱의 곱셈, 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
-        elif label[0] == 0 and label[1] == 1 and label[2] == 0:
+        elif label_1_7[0] == 0 and label_1_7[1] == 1 and label_1_7[2] == 0:
             st.success('거듭제곱의 곱셈을 이해하고 있구나! 거듭제곱의 거듭제곱, 일차방정식 풀이를 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
-        elif label[2] == 0 and label[2] == 0 and label[2] == 1:
+        elif label_1_7[2] == 0 and label_1_7[2] == 0 and label_1_7[2] == 1:
             st.success('일차방정식 풀이를 이해하고 있구나! 거듭제곱의 거듭제곱, 거듭제곱의 곱셈을 올바르게 적용해서 풀이를 완성해보자!', icon="ℹ️")
         else:
             st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
@@ -117,15 +117,15 @@ else : pad = enc[l-max_len:]
 pad_ten = torch.tensor(pad)
 pad_ten = pad_ten.reshape(1,max_len)
 y = model_1_8(pad_ten)
-label = y.squeeze().detach().cpu().numpy().round()
+label_1_8 = y.squeeze().detach().cpu().numpy().round()
 
 if st.button('피드백 받기', key='button_1_8_1'):
     #output차원에 맞추어 피드백 넣기
     st.write(response)
-    if len(label) >= 5:
-        if label[0] == 1 and label[1] == 1 and label[2] == 1 and label[3] == 0 and label[4] == 0:
+    if len(label_1_8) >= 5:
+        if label_1_8[0] == 1 and label_1_8[1] == 1 and label_1_8[2] == 1 and label_1_8[3] == 0 and label_1_8[4] == 0:
             st.success('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환을 이해하고 있구나!', icon="✅")
-        elif label[0] == 0 and label[1] == 0 and label[2] == 0 and label[3] == 1 and label[4] == 1:
+        elif label_1_8[0] == 0 and label_1_8[1] == 0 and label_1_8[2] == 0 and label_1_8[3] == 1 and label_1_8[4] == 1:
             st.success('거듭제곱의 나눗셈, 수의 나눗셈을 이해하고 있구나!', icon="✅")
         #elif label[0] == 1 and label[1] == 0 and label[2] == 1 and label[3] == 0 and label[4] == 0:
         #    st.success('거듭제곱의 곱셈, 단위 변환을 이해하고 있구나! 거듭제곱의 나눗셈을 올바르게 적용해서 풀어보세요!', icon="ℹ️")
