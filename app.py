@@ -444,7 +444,7 @@ if st.button('❓힌트3️⃣', key='button1_7_4'):
     st.write('거듭제곱의 곱셈을 적용해서 식을 정리하세요!')
 
 if st.button('💯모범답안', key='button1_7_5'):
-    image_path = "https://github.com/jjyeong2103/mathtest_jj/blob/main/save/1-7%20%EB%AA%A8%EB%B2%94%EB%8B%B5%EC%95%88.png-.png"
+    image_path = "save/1-7 모범답안.png-.png"
     st.image(image_path, caption='Image Caption')
 
 
