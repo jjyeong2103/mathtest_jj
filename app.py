@@ -89,7 +89,7 @@ c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
 # model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
 model_1_2 = ATTModel(output_d, c) #ATTModel 쓰는경우
 
-model_1_1.load_state_dict(torch.load("./save/"+model_name_1_2+".pt"))
+model_1_2.load_state_dict(torch.load("./save/"+model_name_1_2+".pt"))
 
 # 자신에게 맞는 모델로 부르기
 tokenizer_1_2 = AutoTokenizer.from_pretrained("./save/"+model_name_1_2)  # sp tokenizer 쓰는 경우
