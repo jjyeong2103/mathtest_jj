@@ -437,13 +437,13 @@ if st.button('👀피드백 받기', key='button1_7_1'):
 if st.button('❓힌트1️⃣', key='button1_7_2'):
     st.write('밑이 2로 같으니, 지수를 정리하세요!')
 
-if st.button('❓힌트2️⃣', key='button1_7_2'):
+if st.button('❓힌트2️⃣', key='button1_7_3'):
     st.write('거듭제곱의 거듭제곱을 적용해서 식을 정리하세요!')
 
-if st.button('❓힌트3️⃣', key='button1_7_2'):
+if st.button('❓힌트3️⃣', key='button1_7_4'):
     st.write('거듭제곱의 곱셈을 적용해서 식을 정리하세요!')
 
-#if st.button('💯모범답안', key='button1_7_2'):
+#if st.button('💯모범답안', key='button1_7_5'):
 #    image_url = "https://github.com/jjyeong2103/mathtest_jj/blob/main/save/1-7%20%EB%AA%A8%EB%B2%94%EB%8B%B5%EC%95%88.png-.png"
 #    st.image(image_url, caption='Image Caption')
 
