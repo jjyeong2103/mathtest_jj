@@ -55,11 +55,11 @@ label_1_1 = y.squeeze().detach().cpu().numpy().round()
 if st.button('피드백 받기', key='button1_1_1_1'):
     
     # output차원에 맞추어 피드백 넣기
-    st.write(response)
-    if label_1_1[0] == 1:
-        st.success('거듭제곱의 곱셈을 이해하고 있구나!', icon="✅")
-    else:
-        st.info('거듭제곱의 곱셈을 복습하세요!', icon="⚠️")
+   st.write(response)
+   if len(label_1_1) >= 1 and label_1_1[0] == 1:
+       st.success('거듭제곱의 곱셈을 이해하고 있구나!', icon="✅")
+   else:
+       st.info('거듭제곱의 곱셈을 복습하세요!', icon="⚠️")
 
 
 if st.button('힌트 보기', key='button1_1_1_2'):
