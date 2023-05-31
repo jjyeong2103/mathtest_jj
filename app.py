@@ -308,6 +308,62 @@ if st.button('힌트 보기', key='button1_1_5_2'):
     st.write('괄호 안의 식을 세제곱하세요!')
 
 
+st.markdown("---")
+# 문항1-6
+
+st.subheader("문항1-6")
+st.markdown("$$ (b/3)^{4} = $$")
+
+response = st.text_input('답안 :', key='answer_input_1_6')
+
+# 모델의 이름 정하기
+model_name_1_6 = "1-6_att_sp_74"  # 모델 이름 넣어주기 확장자는 넣지말기!
+# 모델에 맞는 hyperparameter 설정
+vs = 74  # vocab size
+emb = 16  # default 값 지정 안했으면 건드리지 않아도 됨
+hidden = 32  # default 값 지정 안했으면 건드리지 않아도 됨
+nh = 4  # default 값 지정 안했으면 건드리지 않아도 됨
+device = "cpu"  # default 값 지정 안했으면 건드리지 않아도 됨
+max_len = 100
+# output_d 설정
+output_d_1_6 = 1  # 자기의 모델에 맞는 output_d구하기 (지식요소 개수)
+c = cfg(vs=vs, emb=emb, hidden=hidden, nh=nh, device=device)
+
+# model = RNNModel(output_d_1_1, c)  # RNNModel 쓰는경우
+# model = LSTMModel(output_d, c) #LSTMModel 쓰는경우
+model_1_6 = ATTModel(output_d_1_6, c) #ATTModel 쓰는경우
+
+model_1_6.load_state_dict(torch.load("./save/"+model_name_1_6+".pt"))
+
+# 자신에게 맞는 모델로 부르기
+tokenizer_1_6 = AutoTokenizer.from_pretrained("./save/"+model_name_1_6)  # sp tokenizer 쓰는 경우
+# tokenizer = BertTokenizer.from_pretrained("./save/"+model_name+"-vocab.txt") #bw tokenizer 쓰는경우
+
+enc = tokenizer_1_6(response)["input_ids"]  # sp tokenizer
+# enc = tokenizer.encode(response) #bw tokenizer
+l = len(enc)
+if l < max_len:
+    pad = (max_len - l) * [0] + enc
+else:
+    pad = enc[l-max_len:]
+pad_ten = torch.tensor(pad)
+pad_ten = pad_ten.reshape(1, max_len)
+y = model_1_6(pad_ten)
+label_1_6 = y.squeeze().detach().cpu().numpy().round()
+
+if st.button('피드백 받기', key='button1_1_6_1'):
+    
+    # output차원에 맞추어 피드백 넣기
+   st.write(response)
+   if label_1_6 == 1:
+       st.success('분수의 거듭제곱을 이해하고 있구나!', icon="✅")
+   else:
+       st.info('분수의 거듭제곱을 복습하세요!', icon="⚠️")
+
+if st.button('힌트 보기', key='button1_1_1_2'):
+    st.write('분모와 분자 모두 네제곱하세요!')
+
+
 
 st.markdown("---")
 #문항1-7
