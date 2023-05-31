@@ -38,7 +38,7 @@ model_1_7 = ATTModel(output_d, c) #ATTModel 쓰는경우
 model_1_7.load_state_dict(torch.load("./save/"+model_name_1_7+".pt"))
 
 #자신에게 맞는 모델로 부르기
-tokenizer_1_7 = AutoTokenizer.from_pretrained("./save/"+model_name) #sp tokenizer 쓰는 경우
+tokenizer_1_7 = AutoTokenizer.from_pretrained("./save/"+model_name_1_7) #sp tokenizer 쓰는 경우
 # tokenizer = BertTokenizer.from_pretrained("./save/"+model_name+"-vocab.txt") #bw tokenizer 쓰는경우
 
 enc = tokenizer_1_7(response)["input_ids"] #sp tokenizer
