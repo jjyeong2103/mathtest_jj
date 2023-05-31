@@ -8,11 +8,9 @@ import numpy as np
 st.title("자동 채점 모델 기반 자동 피드백")
 
 st.markdown("---")
-
 st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인섭, 윤예린, 정유진")
-
-
 st.markdown("---")
+
 # 문항1-1
 
 st.subheader("문항1-1")
