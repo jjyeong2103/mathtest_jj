@@ -11,10 +11,6 @@ st.markdown("---")
 st.write("**팀원** : 수학교육과 김명식, 김재훈, 김지영, 신인섭, 윤예린, 정유진")
 st.markdown("---")
 
-with st.spinner(text='In progress'):
-   time.sleep(10)
-   st.success('Done')
-
 # 문항1-1
 
 st.subheader("문항1-1")
