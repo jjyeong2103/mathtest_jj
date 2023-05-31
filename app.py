@@ -506,6 +506,6 @@ if st.button('❓힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
 
 st.markdown("---")
-file_path = "https://github.com/jjyeong2103/mathtest_jj/blob/main/%EB%B3%B5%EC%8A%B5%EB%AC%B8%EC%A0%9C(%EC%8B%9D%EC%9D%98%EA%B3%84%EC%82%B0).hwp"  
+file_path = ""  
 st.download_button('🌻복습 문항 다운받기🌻', file_path)
 st.markdown("---")
