@@ -143,5 +143,8 @@ if st.button('피드백 받기', key='button_1_8_1'):
     else:
         st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
 
+
+st.write(label)  # label 값을 출력하여 확인합니다.
+
 if st.button('힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
