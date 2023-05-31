@@ -360,7 +360,7 @@ if st.button('피드백 받기', key='button1_1_6_1'):
    else:
        st.info('분수의 거듭제곱을 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button1_1_1_2'):
+if st.button('힌트 보기', key='button1_1_6_2'):
     st.write('분모와 분자 모두 네제곱하세요!')
 
 
