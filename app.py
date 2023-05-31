@@ -62,7 +62,7 @@ if st.button('피드백 받기', key='button1_1_1_1'):
    else:
        st.info('거듭제곱의 곱셈을 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button1_1_1_2'):
+if st.button('❓힌트 보기', key='button1_1_1_2'):
     st.write('밑이 a로 같아요!')
 
 
@@ -125,7 +125,7 @@ if st.button('피드백 받기', key='button1_1_2_1'):
             st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
 
 
-if st.button('힌트 보기', key='button1_1_2_2'):
+if st.button('❓힌트 보기', key='button1_1_2_2'):
     st.write('괄호를 먼저 정리하세요!')
 
 
@@ -182,7 +182,7 @@ if st.button('피드백 받기', key='button1_1_3_1'):
    else:
             st.info('거듭제곱의 나눗셈을 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button1_1_3_2'):
+if st.button('❓힌트 보기', key='button1_1_3_2'):
     st.write('밑이 b로 같아요!')
 
 
@@ -244,7 +244,7 @@ if st.button('피드백 받기', key='button1_1_4_1'):
             st.info('거듭제곱의 나눗셈1, 거듭제곱의 나눗셈2를 복습하세요!', icon="⚠️")
 
 
-if st.button('힌트 보기', key='button1_1_4_2'):
+if st.button('❓힌트 보기', key='button1_1_4_2'):
     st.write('지수의 대소를 체크하세요!')
 
 
@@ -305,7 +305,7 @@ if st.button('피드백 받기', key='button1_1_5_1'):
        else:
             st.info('곱의 거듭제곱, 거듭제곱의 거듭제곱을 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button1_1_5_2'):
+if st.button('❓힌트 보기', key='button1_1_5_2'):
     st.write('괄호 안의 식을 세제곱하세요!')
 
 
@@ -361,7 +361,7 @@ if st.button('피드백 받기', key='button1_1_6_1'):
    else:
        st.info('분수의 거듭제곱을 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button1_1_6_2'):
+if st.button('❓힌트 보기', key='button1_1_6_2'):
     st.write('분모와 분자 모두 네제곱하세요!')
 
 
@@ -427,7 +427,7 @@ if st.button('피드백 받기', key='button1_7_1'):
         else:
             st.info('거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식 풀이를 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button1_7_2'):
+if st.button('❓힌트 보기', key='button1_7_2'):
     st.write('밑이 2로 같으니, 지수를 정리하세요!')
 
 
@@ -495,5 +495,5 @@ if st.button('피드백 받기', key='button_1_8_1'):
         else:
             st.info('거듭제곱의 곱셈, 거듭제곱의 나눗셈, 단위 변환, 수의 나눗셈을 복습하세요!', icon="⚠️")
 
-if st.button('힌트 보기', key='button_1_8_2'):
+if st.button('❓힌트 보기', key='button_1_8_2'):
     st.write('단위 변환을 해보세요!')
