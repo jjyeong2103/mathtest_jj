@@ -128,10 +128,10 @@ if st.button('힌트 보기', key='button1_1_2_2'):
     st.write('괄호를 먼저 정리하세요!')
 
 st.markdown("---")
-# 문항1-2
+# 문항1-3
 
 st.subheader("문항1-2")
-st.markdown("$$ (x^{4})^{3} \\times (x^{2})^{5} = $$")
+st.markdown("$$ b^{3} \\div b^{6} = $$")
 
 response = st.text_input('답안 :', key='answer_input_1_3')
 
