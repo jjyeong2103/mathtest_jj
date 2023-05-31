@@ -15,8 +15,8 @@ import streamlit as st
 import time
 
 with st.spinner(text='In progress'):
-    time.sleep(5)
-    st.success('Done')
+    time.sleep(1)
+    st.success('자! 여러분들이 얼마나 공부를 열심히 했는지 확인해봅시다!')
 
 
 # 문항1-1
