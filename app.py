@@ -542,8 +542,8 @@ data_1_7_1 = {
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
 
-markdown_table_1_7_1 = df_1_7_1.to_markdown(index=False)
-st.markdown(markdown_table_1_7_1, unsafe_allow_html=True)
+
+st.markdown(df_1_7_1)
 
 st.write("**모범답안2**")
 
