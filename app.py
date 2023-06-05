@@ -536,14 +536,17 @@ st.write("**지식요소** : 거듭제곱의 거듭제곱, 거듭제곱의 곱�
 
 st.write("**모범답안1**")
 data_1_7_1 = {
-    '과정': ['36MB = $$36 \\times 2^{10}}$$ KB= $ 36 \\times 2^{10} \\times 2^{10} $ B= $ 36 \\times 2^{20} $ B', '$2^6x=2^{3+3x}$', '$6x=3+3x$'],
+    '과정': ['36MB = $$36 \\times 2^{10}$$ KB = $36 \\times 2^{10} \\times 2^{10}$ B = $36 \\times 2^{20}$ B', '$2^6x = 2^{3+3x}$', '$6x = 3+3x$'],
     '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이']
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
+
 df_1_7_1['과정'] = df_1_7_1['과정'].apply(lambda x: f'${x}$')
 
 styled_df_1_7_1 = df_1_7_1.style
-st.write(styled_df_1_7_1)
+styled_table_1_7_1 = styled_df_1_7_1.to_string(index=False)
+
+st.markdown(styled_table_1_7_1, unsafe_allow_html=True)
 
 
 st.write("**모범답안2**")
