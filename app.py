@@ -541,11 +541,7 @@ data_1_7_1 = {
     '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이']
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
-
-
-markdown_table_1_7_1 = df_1_7_1.to_markdown(index=False)
-
-st.markdown(markdown_table_1_7_1)
+st.table(df_1_7_1)
 
 
 st.write("**모범답안2**")
