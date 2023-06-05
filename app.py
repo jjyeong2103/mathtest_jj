@@ -546,8 +546,9 @@ data_1_7_1 = {
 df_1_7_1 = pd.DataFrame(data_1_7_1)
 
 # 표의 각 셀에 Markdown으로 변환된 수식을 넣기
-df_1_7_1['과정'] = df_1_7_1['과정'].apply(lambda x: markdown.markdown(x, extensions=['latex']))
+df_1_7_1['과정'] = df_1_7_1['과정'].apply(lambda x: f"$ {x} $")
 
+# DataFrame을 표로 출력
 st.table(df_1_7_1)
 
 
