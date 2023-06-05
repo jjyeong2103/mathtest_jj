@@ -623,10 +623,10 @@ st.table(df_1_8_1)
 st.write("**모범답안2**")
 
 data_1_8_2 = {
-    '과정': [r'$9 \times 2^20B = 9 \times 2^10 \times 2^10 B = 9 \times 2^10KB = 9MB$', '따라서 구하는 시간은 $36 \div 9 = 4(초)$'],
+    '과정': ['$9 \times 2^20B = 9 \times 2^10 \times 2^10 B = 9 \times 2^10KB = 9MB$', '따라서 구하는 시간은 $36 \div 9 = 4(초)$'],
     '지식요소': ['거듭제곱의 나눗셈1, 단위의 이해', '수의 나눗셈'],
 }
-latex_equation1 = r"""
+#latex_equation1 = r"""
 
 df_1_8_2 = pd.DataFrame(data_1_8_2)
 st.table(df_1_8_2)
@@ -665,9 +665,9 @@ st.header("2-6")
 st.write("목표가 되는 식을 구하기 위해 등식의 성질을 적절히 사용할 수 있는가?")
 st.write("단항식의 곱셈과 나눗셈을 할 수 있는가?")
 
-st.write(r"**문제** : ( - 12x^{3}y^{2} ) \div \square \times 18x^{3}y^{3} = 8x^{2}y^{3}일 때 \square 안에 알맞은 식을 구하시오.")
+st.write("**문제** : ( - 12x^{3}y^{2} ) \div \square \times 18x^{3}y^{3} = 8x^{2}y^{3}일 때 \square 안에 알맞은 식을 구하시오.")
 st.write("**지식요소** : 등식의 성질, 단항식의 곱셈, 단항식의 나눗셈, 거듭제곱의 곱셈, 거듭제곱의 나눗셈")
-latex_equation1 = r"""
+#latex_equation1 = r"""
 
 st.write("**모범답안1**")
 
@@ -727,10 +727,10 @@ st.write("오류유형 4 사진 파일 넣기")
 st.markdown("---")
 
 st.header("2-7")
-st.write(r"**문제** :  높이가 (2x)^2인 삼각형의 넓이가 48x^3y^2일 때, 이 삼각형의 밑변의 길이를 구하시오.")
+st.write("**문제** :  높이가 (2x)^2인 삼각형의 넓이가 48x^3y^2일 때, 이 삼각형의 밑변의 길이를 구하시오.")
 st.write("**지식요소** : 곱의 거듭제곱, 거듭제곱의 나눗셈, 다항식의 나눗셈, 삼각형의 넓이")
 st.write("**피드백 요소** : 미지수의 의미를 명시함, 12xy2(삼각형의 넓이공식에서 실수)")
-latex_equation1 = r"""
+#latex_equation1 = r"""
 
 st.write("**모범답안1**")
 st.wirte("밑변을 미지수로 놓고 삼각형의 넓이에 대한 식을 세워 계산")
@@ -745,10 +745,10 @@ st.table(df_2_7_1)
 st.write("**모범답안2**")
 st.write("밑변에 대한 식을 세운 후 계산함.")
 data_2_7_2 = {
-    '과정': [r'$48x^{3}y^{2} \times 2 \div ( 2x )^{2}$', '$=96x^{3}y^{2}\times 1/4x^{2}$', '$= 24xy^{2}$'],
+    '과정': ['$48x^{3}y^{2} \times 2 \div ( 2x )^{2}$', '$=96x^{3}y^{2}\times 1/4x^{2}$', '$= 24xy^{2}$'],
     '지식요소': ['삼각형의 넓이', '곱의 거듭제곱', '거듭제곱의 나눗셈']
 }
-latex_equation1 = r"""
+#latex_equation1 = r"""
 
 df_2_7_2 = pd.DataFrame(data_2_7_2)
 st.table(df_2_7_2)
