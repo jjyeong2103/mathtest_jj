@@ -541,29 +541,8 @@ data_1_7_1 = {
     '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이']
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
-st.table(df_1_7_1)
-#####
-import streamlit as st
-import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.cm as cm
+st.dataframe(df_1_7_1)
 
-# 데이터프레임 생성
-data = {
-    'Formula': ['$$E=mc^2$$', '$$\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}$$'],
-    'Description': ['Einstein\'s mass-energy equivalence', 'Basel problem solution']
-}
-df = pd.DataFrame(data)
-
-# 데이터프레임에 있는 LaTeX 수식을 수식으로 변환
-df['Formula'] = df['Formula'].apply(lambda x: st.latex(x))
-
-# 데이터프레임 출력
-st.dataframe(df)
-
-# 테이블로 출력하기
-st.table(df)
-######
 
 st.write("**모범답안2**")
 
