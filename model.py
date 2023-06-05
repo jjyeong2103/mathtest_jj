@@ -113,3 +113,7 @@ class ATTModel(nn.Module):
         zero_tensor = torch.zeros_like(x)  # 동일한 크기의 0으로 채워진 텐서 생성
         padding = torch.eq(x, zero_tensor)  # 입력 텐서와 0으로 채워진 텐서 비교
         return padding 
+
+
+
+###새로운 거 실행해보기
