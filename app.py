@@ -540,10 +540,11 @@ data_1_7_1 = {
     '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이']
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
-
 df_1_7_1['과정'] = df_1_7_1['과정'].apply(lambda x: f'${x}$')
-st.write(df_1_7_1, unsafe_allow_html=True)
-#st.dataframe(df_1_7_1)
+
+styled_df_1_7_1 = df_1_7_1.style
+st.write(styled_df_1_7_1)
+
 
 st.write("**모범답안2**")
 
