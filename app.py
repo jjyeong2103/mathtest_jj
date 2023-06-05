@@ -549,7 +549,7 @@ df_1_7_1 = pd.DataFrame(data_1_7_1)
 df_1_7_1['과정'] = df_1_7_1['과정'].apply(lambda x: f"$ {x} $")
 
 # DataFrame을 표로 출력
-st.table(df_1_7_1)
+st.dataframe(df_1_7_1)
 
 
 st.write("**모범답안2**")
