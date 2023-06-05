@@ -753,8 +753,7 @@ st.image(image_url)
 
 
 st.write("👉**지식맵**")
-image_url = 'save/사진자료/3-3 지식맵.png'
-st.image(image_url)
+st.write("3-3 지식맵 넣기")
 
 st.write("👉**오개념**")
 st.markdown('<span style="color: blue;">1. 등호 사용의 오류</span>', unsafe_allow_html=True)
