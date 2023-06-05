@@ -650,8 +650,8 @@ st.write("👉**오개념**")
 st.markdown('<span style="color: blue;">1. 등호오류: 서로 다른 식들을 등호로 계속 연결하는 오류</span>', unsafe_allow_html=True)
 st.write("예_$2^{10} \\times 2^{10} = {{ 2^{20} \\times 36 } \\over { 2^{20} \\times 9 }}$ = 4초")
 
-st.write("2. 식오류: 논리적으로 맞지 않는 식을 전개하였음. 특정한 부분의 오개념이라기보단 전체적인 식 전개에 오류가 있다고 판단됨.")
-st.write("예_1KB = 2^10B \\ 1MB = 2^10KB 용량 36MB \\ 1초당 9 \times 2^20B이기에 \left (2^10KB \right )^36 = 2^360(K^36)(B^36) \\ 2^360(K^36)(B^36) \div 9 \times 2^20B = 9 \times 2^18(K^36)(B^17)초")
+st.markdown('<span style="color: blue;">2. 식오류: 논리적으로 맞지 않는 식을 전개하였음. 특정한 부분의 오개념이라기보단 전체적인 식 전개에 오류가 있다고 판단됨</span>', unsafe_allow_html=True)
+st.write("예_1KB = $2^{10}$B \\ 1MB = $2^{10}$KB 용량 36MB 1초당 $9 \\times 2^{20}$B이기에 $(2^{10}KB)^{36} = 2^{360}(K^{36})(B^{36})$ $2^{360}(K^{36})(B^{36}) \\div 9 \\times 2^{20}B = 9 \\times 2^{18}(K^{36})(B^{17})$초")
 
 st.write("3. 단위 혼동: B, KB, MB를 통일하지 않고 혼용해서 사용하는 오류")
 st.write("예_36MB = 36 \times 2^10KB \\ 9 \times 2^20KB \times 4 = 36MB \\ 4초")
