@@ -715,16 +715,16 @@ st.image(image_url)
 
 st.write("👉**오개념 및 오류**")
 st.markdown('<span style="color: blue;">1. 삼각형의 넓이 공식 오류: 삼각형의 넓이 공식에서 2를 나누어야하는데 이를 생략하거나 2를 곱하는 등의 오류를 보임</span>', unsafe_allow_html=True)
-image_url = 'save/사진자료/2-7 오류유형1.png'
+image_url = 'save/사진자료/2-7 오개념 및 오류1.png'
 st.image(image_url)
 
 st.markdown('<span style="color: blue;">2. 계산 실수: 단순 계산 실수를 한 것으로 보임</span>', unsafe_allow_html=True)
-image_url = 'save/사진자료/2-7 오류유형2.png'
+image_url = 'save/사진자료/2-7 오개념 및 오류2.png'
 st.image(image_url)
 
 
 st.markdown('<span style="color: blue;">3. 문제 파악 오류: 문제 파악을 제대로 하지 못함</span>', unsafe_allow_html=True)
-image_url = 'save/사진자료/2-7 오류유형3.png'
+image_url = 'save/사진자료/2-7 오개념 및 오류3.png'
 st.image(image_url)
 
 
