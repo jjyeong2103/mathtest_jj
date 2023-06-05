@@ -524,9 +524,9 @@ if st.button('❓힌트 보기', key='button_1_8_2'):
 
 ####조별 과제 부분 체크
 
-st.set_page_config(layout="wide")
-st.title("대표 문항 설계")
-st.divider()
+#st.set_page_config(layout="wide")
+#st.title("대표 문항 설계")
+#st.divider()
 
 ###1-7
 st.header("1-7")
@@ -537,7 +537,7 @@ latex_equation1 = r"""
 st.write("**모범답안1**")
 
 data_1_7_1 = {
-    '과정': ['2^{4x} \\times 2^{2x} = 2^3 \\times 2^{3x}', '2^{6x} = 2^{3+3x}', '6x = 3+3x'],
+    '과정': ['$2^{4x} \\times 2^{2x} = 2^3 \\times 2^{3x}$', '$2^{6x} = 2^{3+3x}$', '$6x = 3+3x$'],
     '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이'],
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
@@ -547,7 +547,7 @@ st.table(df_1_7_1)
 st.write("**모범답안2**")
 
 data_1_7_2 = {
-    '과정': ['2^{6x} = 2^{3+3x}', '6x = 3+3x', 'x = 1'],
+    '과정': ['$2^{6x} = 2^{3+3x}$', '$6x = 3+3x$', '$x = 1$'],
     '지식요소': ['거듭제곱의 거듭제곱, 거듭제곱의 곱셈', '일차방정식의 풀이', ''],
 }
 df_1_7_2 = pd.DataFrame(data_1_7_2)
