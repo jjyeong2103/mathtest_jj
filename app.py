@@ -527,9 +527,7 @@ if st.button('❓힌트 보기', key='button_1_8_2'):
 #st.set_page_config(layout="wide")
 #st.title("대표 문항 설계")
 #st.divider()
-import os
-os.system('pip install tabulate')
-streamlit run app.py
+
 import pandas as pd
 ###1-7
 st.header("1-7")
@@ -544,7 +542,6 @@ data_1_7_1 = {
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
 
-df_1_7_1['과정'] = df_1_7_1['과정'].apply(lambda x: f'${x}$')
 
 markdown_table_1_7_1 = df_1_7_1.to_markdown(index=False)
 
@@ -615,15 +612,15 @@ st.write("**지식요소** : 풀이 방법에 따라 지식 요소 종류 및 �
 st.wirte("풀이방법1- 거듭제곱의 곱셈, 거듭제곱의 나눗셈2, 단위의 이해")
 st.wirte("풀이방법2- 거듭제곱의 나눗셈1, 수의 나눗셈, 단위의 이해")
 st.wirte("풀이방법3- 단위의 이해, 거듭제곱의 나눗셈, 거듭제곱의 나눗셈2")
-latex_equation1 = r"""
+
 
 st.write("**모범답안1**")
 
 data_1_8_1 = {
-    '과정': [r'$36MB = 36 \times 2^10 KB = 36 \times 2^10 \times 2^10 B = 36 \times 2^20 B$', '따라서 구하는 시간은 ${ 36 \times 2^20 }/{ 9 \times 2^20 } = 4(초)$'],
+    '과정': ['$36MB = 36 \times 2^10 KB = 36 \times 2^10 \times 2^10 B = 36 \times 2^20 B$', '따라서 구하는 시간은 ${ 36 \times 2^20 }/{ 9 \times 2^20 } = 4(초)$'],
     '지식요소': ['거듭제곱의 곱셈, 단위의 이해', '거듭제곱의 나눗셈 2']
 }
-latex_equation1 = r"""
+
 
 df_1_8_1 = pd.DataFrame(data_1_8_1)
 st.table(df_1_8_1)
