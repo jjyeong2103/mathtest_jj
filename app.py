@@ -801,8 +801,8 @@ df_3_3_3 = pd.DataFrame(data_3_3_3)
 st.table(df_3_3_3)
 
 
-st.write("**지식맵**")
-st.write("3-3 지식맵 파일 넣기")
+st.write('**지식맵**')
+st.write('3-3 지식맵 파일 넣기')
 
-st.write("**오개념**")
-st.write("1. 등호 사용의 오류")
+st.write('**오개념**')
+st.write('1. 등호 사용의 오류')
