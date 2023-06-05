@@ -527,7 +527,9 @@ if st.button('❓힌트 보기', key='button_1_8_2'):
 #st.set_page_config(layout="wide")
 #st.title("대표 문항 설계")
 #st.divider()
-pip install tabulate
+import os
+os.system('pip install tabulate')
+streamlit run app.py
 import pandas as pd
 ###1-7
 st.header("1-7")
