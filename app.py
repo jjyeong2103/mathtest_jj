@@ -559,32 +559,36 @@ st.image(image_url)
 
 st.write("👉**오개념**")
 st.markdown('<span style="color: blue;">1. 등호오류</span>', unsafe_allow_html=True)
-st.write("⚠️1-1. 거듭제곱과 지수의 계산을 혼동하는 것으로 보임")
+st.markdown('<span style="color: blue;">⚠️1-1. 거듭제곱과 지수의 계산을 혼동하는 것으로 보임</span>', unsafe_allow_html=True)
 st.write("예 : $(2^{4})^{x} \\times ( 2^{2})^{x} = 2^{3} \\times 2^{ 3x } = x = 1$")
 st.write("예 : $2^{ 4 \\times x } \\times 2^{ 2 \\times x } = 2^{3} \\times 2^{ 3x } = 2^{ 4x + 2x } = 2^{ 3x + 3 } = 6x = 3x + 3$ ")
 
-st.write("⚠️1-2. 등호를 계산 진행과정 사이에 사용함")
+
+st.markdown('<span style="color: blue;">⚠️1-2. 등호를 계산 진행과정 사이에 사용함</span>', unsafe_allow_html=True)
 st.write("예 : $(2^{4})^{x} \\times (2^{2})^{x} = 2^{3} \\times 2^{ 3x } = 2^{ 4x } \\times 2^{ 2x } = 2^{3} \\times 2^{ 3x } = 2^{ 3x } = 2^{3}$")
 
-st.write("⚠️1-3. 논리적 오류가 없는 부분도 있지만 등호를 계산 진행 과정 사이에 사용함")
+st.markdown('<span style="color: blue;">⚠️1-3. 논리적 오류가 없는 부분도 있지만 등호를 계산 진행 과정 사이에 사용함</span>', unsafe_allow_html=True)
 st.write("예 : $(2^{4})^{x} \\times (2^{2})^{x} = 2^{3} \\times (2^{3})^{x} = 2^{ 4x } \\times 2^{ 2x } = 2^{3} \\times 2^{ 3x } = 2^{ 6x } \\div 2^{ 3x } = 2^3 = 2^{ 3x } = 2^{3} $")
 
 st.markdown('<span style="color: blue;">2. 식 오류</span>', unsafe_allow_html=True)
-st.write("⚠️2-1. 곱셈 기호를 덧셈 기호로 혼동하여 작성함")
+st.markdown('<span style="color: blue;">⚠️2-1. 곱셈 기호를 덧셈 기호로 혼동하여 작성함</span>', unsafe_allow_html=True)
 st.write("예 : $2^{ 4x } \\times 2^{ 2x } = 2^{ 6x }$, $2^{ 6x } = 2^3 + 2^{ 3x }$")
-st.write("⚠️2-2. 중간에 옮겨적는 과정에서 수나 문자를 잘못 적음")
+
+st.markdown('<span style="color: blue;">⚠️2-2. 중간에 옮겨적는 과정에서 수나 문자를 잘못 적음</span>', unsafe_allow_html=True)
 st.write("예 : $( 2^{4})^{x} \\times ( 2^{2})^{x} = 2^{3} \\times 2^{ 3x }$, $2^{ 4x } \\times 2^{ 2x } = 2^3 \\times 2^{x}$")
 st.write("예 : $( 2^{4})^{x} \\times ( 2^{2})^{x} = 2^{ 4x } \\times 2^{ 2x } = 2^{ 6x } = 2^{ 3x } \\times 2^{ 3x }$")
 st.write("예 : $x^{ 4x } \\times 2^{ 2x } = 2^{ 3 + 3x }$")
-st.write("⚠️2-3. 지수에 있는 미지수를 빼고 계산함")
+
+st.markdown('<span style="color: blue;">⚠️2-3. 지수에 있는 미지수를 빼고 계산함</span>', unsafe_allow_html=True)
 st.write("예 : $2^{4} \\times 2^{2} = 2^{3} \\times 2^{3} = 16 \\times 4 = 8 \\times 8$, $x = 1$")
 
 st.markdown('<span style="color: blue;">3. 이항오개념</span>', unsafe_allow_html=True)
-st.write("⚠️3-1. 등식의 성질을 이용하여 양변에 2^{3x}를 나눈 것인데 이항이라는 용어로 표현함")
+
+st.markdown('<span style="color: blue;">⚠️3-1. 등식의 성질을 이용하여 양변에 2^{3x}를 나눈 것인데 이항이라는 용어로 표현함</span>', unsafe_allow_html=True)
 st.write("예 : ${ 2^{6}}^{x} = 2^{3} \\times 2^{ 3x }$ 이항 $2^{ 3x } = 2^{3}$")
 
 st.markdown('<span style="color: blue;">4. 대입으로 해결</span>', unsafe_allow_html=True)
-st.write("⚠️4-1. 오류는 아니지만 이 문제에서 평가하고자 하는 요소가 아닌 대입으로 해결함")
+st.markdown('<span style="color: blue;">⚠️4-1. 오류는 아니지만 이 문제에서 평가하고자 하는 요소가 아닌 대입으로 해결함</span>', unsafe_allow_html=True)
 st.write("예 : $x$에 1 대입  $2^{ 4 \\times 1 } \\times 2^{ 2 \\times 1}$, $2^{6}=2^{3}\\times2^{3\\times 1 }$, $2^{4} \\times 2^{2} = 2^{6}$, $2^{6} = 2^{6}$, 1")
 st.write("예 : $( 2^{4})^{1} \\times ( 2^{2})^{1} = 2^{3} \\times 2^{3}$, $x = 1$")
 st.write("예 : $x = 1$, $2^{3} \\times 2^{3} = 2^{4} \\times 2^{2}$")
