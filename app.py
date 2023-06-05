@@ -567,6 +567,7 @@ st.write("**지식맵**")
 st.write("1-7 지식맵 파일 넣기")
 
 st.write("**오개념**")
+st.markdown('<span style="color: red;">1. 등호오류</span>', unsafe_allow_html=True)
 st.write("1. 등호오류")
 st.write("1-1. 거듭제곱과 지수의 계산을 혼동하는 것으로 보임")
 st.write("예_\left ( 2^4 \right )^x \times \left ( 2^2 \right )^x = 2^3 \times 2^{ 3x } = x = 1")
