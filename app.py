@@ -655,8 +655,7 @@ st.write("3. 단위 혼동: B, KB, MB를 통일하지 않고 혼용해서 사용
 st.write("예_36MB = 36 \times 2^10KB \\ 9 \times 2^20KB \times 4 = 36MB \\ 4초")
 
 st.write("4. 나눗셈 괄호 오류: 나눗셈을 할 때, 분자,분모에 해당하는 식 전체에 괄호를 하지 않는 오류")
-st.write("예_36MB = 36 \times 2^10KB \\ 36 \times 2^10KB = 36 \times 2^10 \times 2^10B \\ 36 \times 2^10 \times 2^10B = 2^22 3^2B \\ 2^22 3^2B \div 9 \times 2^20B = 2^2 \\ 
-2^2 = 4")
+st.write("예_36MB = 36 \times 2^10KB \\ 36 \times 2^10KB = 36 \times 2^10 \times 2^10B \\ 36 \times 2^10 \times 2^10B = 2^22 3^2B \\ 2^22 3^2B \div 9 \times 2^20B = 2^2 \\ 2^2 = 4")
 
 ###2-6
 st.markdown("---")
