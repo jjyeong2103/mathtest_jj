@@ -622,7 +622,8 @@ st.write("✔️실제로 학생들은 모범답안 1, 2의 방향으로의 풀�
 st.write("✔️풀이 방법에 따라 평가할 인지 요소의 종류 및 순서가 달라지는데, 이를 하나의 모델에 적용하는 것이 쉽지 않았던 것 같음")
 
 st.write("👉**지식맵**")
-st.write("1-8 지식맵 파일 넣기")
+image_url = 'save/사진자료/1-8 지식맵.png'
+st.image(image_url)
 
 st.write("👉**오개념**")
 st.markdown('<span style="color: blue;">1. 등호오류: 서로 다른 식들을 등호로 계속 연결하는 오류</span>', unsafe_allow_html=True)
