@@ -543,10 +543,9 @@ df_1_7_1 = pd.DataFrame(data_1_7_1)
 
 df_1_7_1['과정'] = df_1_7_1['과정'].apply(lambda x: f'${x}$')
 
-styled_df_1_7_1 = df_1_7_1.style
-styled_table_1_7_1 = styled_df_1_7_1.render()
+markdown_table_1_7_1 = df_1_7_1.to_markdown(index=False)
 
-st.markdown(styled_table_1_7_1, unsafe_allow_html=True)
+st.markdown(markdown_table_1_7_1, unsafe_allow_html=True)
 
 
 st.write("**모범답안2**")
