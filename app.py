@@ -653,11 +653,11 @@ st.write("예_$2^{10} \\times 2^{10} = {{ 2^{20} \\times 36 } \\over { 2^{20} \\
 st.markdown('<span style="color: blue;">2. 식오류: 논리적으로 맞지 않는 식을 전개하였음. 특정한 부분의 오개념이라기보단 전체적인 식 전개에 오류가 있다고 판단됨</span>', unsafe_allow_html=True)
 st.write("예_1KB = $2^{10}$B \\ 1MB = $2^{10}$KB 용량 36MB 1초당 $9 \\times 2^{20}$B이기에 $(2^{10}KB)^{36} = 2^{360}(K^{36})(B^{36})$ $2^{360}(K^{36})(B^{36}) \\div 9 \\times 2^{20}B = 9 \\times 2^{18}(K^{36})(B^{17})$초")
 
-st.write("3. 단위 혼동: B, KB, MB를 통일하지 않고 혼용해서 사용하는 오류")
-st.write("예_36MB = 36 \times 2^10KB \\ 9 \times 2^20KB \times 4 = 36MB \\ 4초")
+st.markdown('<span style="color: blue;">3. 단위 혼동: B, KB, MB를 통일하지 않고 혼용해서 사용하는 오류</span>', unsafe_allow_html=True)
+st.write("예_36MB = $36 \\times 2^{10}$KB $ 9 \\times 2^{20}KB \\times 4 = 36$MB 4초")
 
-st.write("4. 나눗셈 괄호 오류: 나눗셈을 할 때, 분자,분모에 해당하는 식 전체에 괄호를 하지 않는 오류")
-st.write("예_36MB = 36 \times 2^10KB \\ 36 \times 2^10KB = 36 \times 2^10 \times 2^10B \\ 36 \times 2^10 \times 2^10B = 2^22 3^2B \\ 2^22 3^2B \div 9 \times 2^20B = 2^2 \\ 2^2 = 4")
+st.markdown('<span style="color: blue;">4. 나눗셈 괄호 오류: 나눗셈을 할 때, 분자,분모에 해당하는 식 전체에 괄호를 하지 않는 오류</span>', unsafe_allow_html=True)
+st.write("예_36MB = $36 \\times 2^{10}$KB  $36 \\times 2^{10}KB = 36 \\times 2^{10} \\times 2^{10}$B $36 \\times 2^{10} \\times 2^{10}B = 2^{22} 3^{2}B$  $2^{22} 3^{2}B \\div 9 \\times 2^{20}B = 2^{2}$ $2^{2} = 4")
 
 ###2-6
 st.markdown("---")
