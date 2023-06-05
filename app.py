@@ -537,10 +537,10 @@ latex_equation1 = r"""
 st.write("**모범답안1**")
 data_1_7_1 = {
     '과정': [r'$36MB = 36 \times 2^{10} KB = 36 \times 2^{10} \times 2^{10} B = 36 \times 2^{20} B$', '$$2^{6x} = 2^{3+3x}$$', '$$6x = 3 + 3x$$'],
-    '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이'],
+    '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이']
 }
 latex_equation1 = r"""
-import pandas as pd
+
 df_1_7_1 = pd.DataFrame(data_1_7_1)
 st.dataframe(df_1_7_1)
 
