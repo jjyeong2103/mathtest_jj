@@ -115,5 +115,3 @@ class ATTModel(nn.Module):
         return padding 
 
 
-
-###새로운 거 실행해보기
