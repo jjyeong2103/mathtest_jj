@@ -636,7 +636,7 @@ st.markdown('<span style="color: blue;">3. 단위 혼동: B, KB, MB를 통일하
 st.write("예 : $36MB = 36 \\times 2^{10}KB, 9 \\times 2^{20}KB \\times 4 = 36MB$, $4$초")
 
 st.markdown('<span style="color: blue;">4. 나눗셈 괄호 오류: 나눗셈을 할 때, 분자,분모에 해당하는 식 전체에 괄호를 하지 않는 오류</span>', unsafe_allow_html=True)
-st.write("예 : $36MB = 36 \\times 2^{10}KB$,  $36 \\times 2^{10}KB = 36 \\times 2^{10} \\times 2^{10}$B $36 \\times 2^{10} \\times 2^{10}B = 2^{22} 3^{2}B$ , $2^{22} 3^{2}B \\div 9 \\times 2^{20}B = 2^{2}$, $2^{2} = 4$")
+st.write("예 : $36MB = 36 \\times 2^{10}KB$,  $36 \\times 2^{10}KB = 36 \\times 2^{10} \\times 2^{10}$B, $36 \\times 2^{10} \\times 2^{10}B = 2^{22} 3^{2}B$ , $2^{22} 3^{2}B \\div 9 \\times 2^{20}B = 2^{2}$, $2^{2} = 4$")
 
 ###2-6
 st.markdown("---")
