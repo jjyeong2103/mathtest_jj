@@ -540,8 +540,9 @@ data_1_7_1 = {
     '과정': ['$2^{4x} \\times 2^{2x} = 2^3 \\times 2^{3x}$', '$2^{6x} = 2^{3+3x}$', '$6x = 3 + 3x$'],
     '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이'],
 }
+
 df_1_7_1 = pd.DataFrame(data_1_7_1)
-st.dataframe(df_1_7_1, escape=False)
+st.markdown(df_1_7_1.to_html(escape=False), unsafe_allow_html=True)
 
 st.write("**모범답안2**")
 
