@@ -597,7 +597,7 @@ st.write("예 : ${ 2^{6}}^{x} = 2^{3} \\times 2^{ 3x }$ 이항 $2^{ 3x } = 2^{3}
 
 st.markdown('<span style="color: blue;">4. 대입으로 해결</span>', unsafe_allow_html=True)
 st.write("⚠️4-1. 오류는 아니지만 이 문제에서 평가하고자 하는 요소가 아닌 대입으로 해결함")
-st.write("예 : $x$에 1 대입  $2^{ 4 \\times 1 } \\times 2^{ 2 \\times 1}$", $2^{6}=2^{3}\\times2^{3\\times 1 }$, $2^{4} \\times 2^{2} = 2^{6}$, $2^{6} = 2^{6}$, 1")
+st.write("예 : $x$에 1 대입  $2^{ 4 \\times 1 } \\times 2^{ 2 \\times 1}$, $2^{6}=2^{3}\\times2^{3\\times 1 }$, $2^{4} \\times 2^{2} = 2^{6}$, $2^{6} = 2^{6}$, 1")
 st.write("예 : $( 2^{4})^{1} \\times ( 2^{2})^{1} = 2^{3} \\times 2^{3}$, $x = 1$")
 st.write("예 : $x = 1$, $2^{3} \\times 2^{3} = 2^{4} \\times 2^{2}$")
 
