@@ -606,7 +606,7 @@ st.write("$2^{6} = 2^{6}$")
 st.write("1")
 st.write("예 : $( 2^{4})^{1} \\times ( 2^{2})^{1} = 2^{3} \\times 2^{3}$")
 st.write("$x = 1$")
-st.write("예 : $x = 1$"
+st.write("예 : $x = 1$")
 st.write("$2^{3} \\times 2^{3} = 2^{4} \\times 2^{2}$")
 
 ###1-8
