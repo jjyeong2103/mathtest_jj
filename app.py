@@ -554,7 +554,8 @@ st.image(image_url)
 
 
 st.write("👉**지식맵**")
-st.write("1-7 지식맵 파일 넣기")
+image_url = 'save/사진자료/1-7 지식맵.png'
+st.image(image_url)
 
 st.write("👉**오개념**")
 st.markdown('<span style="color: blue;">1. 등호오류</span>', unsafe_allow_html=True)
