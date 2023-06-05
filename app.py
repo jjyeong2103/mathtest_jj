@@ -530,13 +530,13 @@ if st.button('❓힌트 보기', key='button_1_8_2'):
 import pandas as pd
 ###1-7
 st.header("1-7")
-st.write(r"**문제** : $(2^4)^x\times(2^3)^x=2^3\times2^{3x}$")
+st.write("**문제** : $(2^4)^x\times(2^3)^x=2^3\times2^{3x}$")
 st.write("**지식요소** : 거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식의 풀이")
 #latex_equation1 = r"""
 
 st.write("**모범답안1**")
 data_1_7_1 = {
-    '과정': ['$36MB = 36 \times 2^{10} KB = 36 \times 2^{10} \times 2^{10} B = 36 \times 2^{20} B$', '$$2^{6x} = 2^{3+3x}$$', '$$6x = 3 + 3x$$'],
+    '과정': ['$36MB = 36\times2^10 KB=36\times2^10\times2^10 B=36\times2^20B$', '$2^6x=2^{3+3x}$', '$6x=3+3x$$'],
     '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이']
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
