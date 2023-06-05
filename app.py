@@ -532,7 +532,7 @@ import pandas as pd
 st.header("1-7")
 st.write(r"**문제** : $(2^4)^x\times(2^3)^x=2^3\times2^{3x}$")
 st.write("**지식요소** : 거듭제곱의 거듭제곱, 거듭제곱의 곱셈, 일차방정식의 풀이")
-latex_equation1 = r"""
+#latex_equation1 = r"""
 
 st.write("**모범답안1**")
 data_1_7_1 = {
