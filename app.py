@@ -806,4 +806,3 @@ st.write("3-3 지식맵 파일 넣기")
 
 st.write("**오개념**")
 st.write("1. 등호 사용의 오류")
-st.write(" 예_ A \\div 3y/2 = 4x^{2}y + 2xy + 6 = {4x^{2}y + 2xy + 6} \\times 3y/2 ")
