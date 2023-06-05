@@ -616,7 +616,7 @@ data_1_8_1 = {
     '과정': ['36MB = 36 \times 2^10 KB = 36 \times 2^10 \times 2^10 B = 36 \times 2^20 B', '따라서 구하는 시간은 { 36 \times 2^20 }/{ 9 \times 2^20 } = 4(초)'],
     '지식요소': ['거듭제곱의 곱셈, 단위의 이해', '거듭제곱의 나눗셈 2']
 }
-df_1_7_1 = pd.DataFrame(data_1_8_1)
+df_1_8_1 = pd.DataFrame(data_1_8_1)
 st.table(df_1_8_1)
 
 
