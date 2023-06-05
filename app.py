@@ -522,8 +522,8 @@ if st.button('❓힌트 보기', key='button_1_8_2'):
 
 
 
-####조별 과제 부분 체크
-
+st.markdown("---")
+####조별 과제 부분 체크####
 #st.set_page_config(layout="wide")
 #st.title("대표 문항 설계")
 #st.divider()
