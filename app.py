@@ -686,7 +686,7 @@ st.table(df_2_6_1)
 
 st.write("👉**모범답안2**")
 
-data_1_8_2 = {
+data_2_6_2 = {
     '과정': ['( - 12x^{3}y^{2} ) \div \square \times 18x^{3}y^{3} = 8x^{2}y^{3}', ' - 12x^{3}y^{2}/\square = 8x^{2}y^{3}/18x^{3}y^{3}', ' - 12x^{3}y^{2}/\square = 4/9x', ' \square = ( - 12x^{3}y^{2} ) \div 4/9x = ( - 12x^{3}y^{2} ) \times 9x/4', '\square = - 27x^{4}y^{2}'],
     '지식요소': ['', '등식의 성질', '단항식의 나눗셈, 거듭제곱의 나눗셈', '등식의 성질', '단항식의 곱셈, 거듭제곱의 곱셈']
 }
@@ -694,7 +694,7 @@ df_2_6_2 = pd.DataFrame(data_2_6_2)
 st.table(df_2_6_2)
 
 
-st.write("**모범답안3**")
+st.write("👉**모범답안3**")
 
 data_2_6_3 = {
     '과정': ['( - 12x^{3}y^{2} ) \div \square \times 18x^{3}y^{3} = 8x^{2}y^{3}', ' - 216x^{6}y^{5} \div \square = 8x^{2}y^{3}', '\square = - 216x^{6}y^{5} \div  8x^{2}y^{3}', '\square =  - 27x^{4}y^{2}'],
@@ -703,7 +703,7 @@ data_2_6_3 = {
 df_2_6_3 = pd.DataFrame(data_2_6_3)
 st.table(df_2_6_3)
 
-st.write("**모범답안4**")
+st.write("👉**모범답안4**")
 
 data_2_6_4 = {
     '과정': ['( - 12x^{3}y^{2} ) \div \square \times 18x^{3}y^{3} = 8x^{2}y^{3}', '\square =kx^{a}y^{b}라 하자.', '계수 k는  -12 \times 18 /div k = -8 이므로 k= -27', ' x 차수는 x^{3} \times x^{3} / x^{a} = x^{2} 이므로  x^{a}=x^{4} \\ y차수는 y^{2} \times y^{3} / y^{b} = y^{3} 이므로  y^{b} = y^{2}', '\square = - 27x^{4}y^{2}'],
@@ -712,32 +712,31 @@ data_2_6_4 = {
 df_2_6_4 = pd.DataFrame(data_2_6_4)
 st.table(df_2_6_4)
 
-st.write("**지식맵**")
+st.write("👉**지식맵**")
 st.write("2-6 지식맵 파일 넣기")
 
-st.write("**오개념**")
-st.write("1. 역수를 구하는 유형: 단항식의 곱셈과 나눗셈을 할 수 있지만 역수를 구함")
+st.write("👉**오개념**")
+st.markdown('<span style="color: blue;">1. 역수를 구하는 유형: 단항식의 곱셈과 나눗셈을 할 수 있지만 역수를 구함</span>', unsafe_allow_html=True)
 st.write("오류유형 1 사진 파일 넣기")
 
-st.write("2. 부호 오류: 부호를 잘못 구한 경우")
+st.markdown('<span style="color: blue;">2. 부호 오류: 부호를 잘못 구한 경우</span>', unsafe_allow_html=True)
 st.write("오류유형 2 사진 파일 넣기")
 
-st.write("3. 식을 잘못 본 경우: 18x^{3}y^{3}을 8x^{3}y^{3}로 잘못보고 계산함")
+st.markdown('<span style="color: blue;">3. 식을 잘못 본 경우: 18x^{3}y^{3}을 8x^{3}y^{3}로 잘못보고 계산함</span>', unsafe_allow_html=True)
 st.write("오류유형 3 사진 파일 넣기")
 
-st.write("4. 식의 계산을 할 수 있지만 등식의 성질을 이해하지 못한 경우: 식의 계산에는 오류가 없지만 등식의 성질을 이해하지 못하여 4/9x의 역수를 곱하지 않음")
+st.markdown('<span style="color: blue;">4. 식의 계산을 할 수 있지만 등식의 성질을 이해하지 못한 경우: 식의 계산에는 오류가 없지만 등식의 성질을 이해하지 못하여 4/9x의 역수를 곱하지 않음</span>', unsafe_allow_html=True)
 st.write("오류유형 4 사진 파일 넣기")
 
 ###2-7
 st.markdown("---")
 
 st.header("2-7")
-st.write("**문제** :  높이가 (2x)^2인 삼각형의 넓이가 48x^3y^2일 때, 이 삼각형의 밑변의 길이를 구하시오.")
-st.write("**지식요소** : 곱의 거듭제곱, 거듭제곱의 나눗셈, 다항식의 나눗셈, 삼각형의 넓이")
-st.write("**피드백 요소** : 미지수의 의미를 명시함, 12xy2(삼각형의 넓이공식에서 실수)")
-#latex_equation1 = r"""
+st.write("👉**문제** :  높이가 (2x)^2인 삼각형의 넓이가 48x^3y^2일 때, 이 삼각형의 밑변의 길이를 구하시오.")
+st.write("👉**지식요소** : 곱의 거듭제곱, 거듭제곱의 나눗셈, 다항식의 나눗셈, 삼각형의 넓이")
+st.write("👉**피드백 요소** : 미지수의 의미를 명시함, 12xy2(삼각형의 넓이공식에서 실수)")
 
-st.write("**모범답안1**")
+st.write("👉**모범답안1**")
 st.wirte("밑변을 미지수로 놓고 삼각형의 넓이에 대한 식을 세워 계산")
 data_2_7_1 = {
     '과정': ['삼각형의 밑변의 길이를 a라 할 때', '( 2x )^{2} \times a \times 1/2 = 48x^{3}y^{2}', '4x^{2} \times a \times 1/2 = 48x^{3}y^{2}', '2x^{2} \times a = 48x^{3}y^{2}', 'a =24xy^{2}'],
@@ -747,22 +746,21 @@ df_2_7_1 = pd.DataFrame(data_2_7_1)
 st.table(df_2_7_1)
 
 
-st.write("**모범답안2**")
+st.write("👉**모범답안2**")
 st.write("밑변에 대한 식을 세운 후 계산함.")
 data_2_7_2 = {
     '과정': ['$48x^{3}y^{2} \times 2 \div ( 2x )^{2}$', '$=96x^{3}y^{2}\times 1/4x^{2}$', '$= 24xy^{2}$'],
     '지식요소': ['삼각형의 넓이', '곱의 거듭제곱', '거듭제곱의 나눗셈']
 }
-#latex_equation1 = r"""
 
 df_2_7_2 = pd.DataFrame(data_2_7_2)
 st.table(df_2_7_2)
 
-st.write("**지식맵**")
+st.write("👉**지식맵**")
 st.write("2-7 지식맵 파일 넣기")
 
-st.write("**오개념 및 오류**")
-st.write("1. 삼각형의 넓이 공식 오류: 삼각형의 넓이 공식에서 2를 나누어야하는데 이를 생략하거나 2를 곱하는 등의 오류를 보임")
+st.write("👉**오개념 및 오류**")
+st.markdown('<span style="color: blue;">1. 삼각형의 넓이 공식 오류: 삼각형의 넓이 공식에서 2를 나누어야하는데 이를 생략하거나 2를 곱하는 등의 오류를 보임</span>', unsafe_allow_html=True)
 st.write("오류유형 1 사진 넣기")
 
 st.write("2. 계산 실수: 단순 계산 실수를 한 것으로 보임.")
