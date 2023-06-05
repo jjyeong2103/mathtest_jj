@@ -527,7 +527,7 @@ if st.button('❓힌트 보기', key='button_1_8_2'):
 #st.set_page_config(layout="wide")
 #st.title("대표 문항 설계")
 #st.divider()
-from IPython.display import display
+
 import pandas as pd
 ###1-7
 st.header("1-7")
@@ -540,7 +540,9 @@ data_1_7_1 = {
     '지식요소': ['거듭제곱의 거듭제곱', '거듭제곱의 곱셈', '일차방정식의 풀이']
 }
 df_1_7_1 = pd.DataFrame(data_1_7_1)
-display(df_1_7_1)
+
+df_1_7_1['과정'] = df_1_7_1['과정'].apply(lambda x: f'${x}$')
+st.write(df_1_7_1, unsafe_allow_html=True)
 #st.dataframe(df_1_7_1)
 
 st.write("**모범답안2**")
